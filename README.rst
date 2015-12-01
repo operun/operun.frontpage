@@ -3,7 +3,7 @@
    This text does not appear on pypi or github. It is a comment.
 
 ==============================================================================
-operun.frontpage
+Plone Frontpage Content-Type
 ==============================================================================
 
 A configurable Frontpage Content-Type for Plone. 
