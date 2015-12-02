@@ -17,4 +17,12 @@
       directory="static"
       />
 
+  <browser:page
+      name="view"
+      for="operun.frontpage.content.frontpage.IFrontpage"
+      class=".frontpage.FrontpageView"
+      layer="operun.frontpage.interfaces.IOperunFrontpageLayer"
+      permission="zope2.View"
+      />
+
 </configure>

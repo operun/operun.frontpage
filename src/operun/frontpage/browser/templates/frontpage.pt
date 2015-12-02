@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    lang="en"
+    xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="plone">
+
+<body>
+
+  <metal:content-core fill-slot="main">
+    <metal:content-core define-macro="content-core" tal:define="toc context/table_of_contents|nothing;">
+
+      <header>
+        <h1 class="documentFirstHeading" tal:content="context/title">Title</h1>
+        <div class="documentDescription description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
+      </header>
+
+      <!-- <div class="teaser_container">
+        <div class="slider">
+          <h2 tal:content=""></h2>
+          <p tal:content=""></p>
+        </div>
+    </div> -->
+
+    </metal:content-core>
+  </metal:content-core>
+
+</body>
+
+</html>
