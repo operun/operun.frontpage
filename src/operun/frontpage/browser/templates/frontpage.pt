@@ -20,7 +20,7 @@
       <div tal:define="teasers view/teaser_loader" tal:condition="teasers">
         <div tal:repeat="teaser teasers">
 
-          <div class="slider">
+          <div id="carousel">
             <div class="slider_top">
               <h2 tal:content="teaser/teaser_title"></h2>
             </div>
