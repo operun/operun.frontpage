@@ -17,12 +17,16 @@
         <div class="documentDescription description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
       </header>
 
-      <!-- <div class="teaser_container">
-        <div class="slider">
-          <h2 tal:content=""></h2>
-          <p tal:content=""></p>
+      <div tal:define="teaser view/teaser_loader" tal:condition="teaser">
+        <div tal:repeat="teaser_item teaser">
+
+          <div class="slider">
+            <h2 tal:content="teaser_item/teaser_title"></h2>
+            <p tal:content="teaser_item/teaser_text"></p>
+          </div>
+
         </div>
-    </div> -->
+      </div>
 
     </metal:content-core>
   </metal:content-core>
