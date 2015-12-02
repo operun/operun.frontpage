@@ -17,9 +17,8 @@ class FrontpageView(BrowserView):
 
     def grab_teaser(self):
         teasers = self.context.listFolderContents()
-        all_teasers = teasers[:len(teasers)]
 
-        return all_teasers
+        return teasers
 
     def teaser_content(self):
         teaser_list = []
@@ -29,12 +28,12 @@ class FrontpageView(BrowserView):
             text = teaser.description
             image = teaser.image
 
-        teaser_dict = {
-            # Teaser content vaiables.
-            'teaser_title': title,
-            'teaser_text': text,
-            'teaser_image': image,
-        }
-        teaser_list.append(teaser_dict)
+            teaser_dict = {
+                # Teaser content vaiables.
+                'teaser_title': title,
+                'teaser_text': text,
+                'teaser_image': image,
+            }
+            teaser_list.append(teaser_dict)
 
         return teaser_list

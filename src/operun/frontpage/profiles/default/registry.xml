@@ -1,0 +1,23 @@
+<registry>
+
+  <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/frontpage">
+    <value key="js">++resource++operun.frontpage/frontpage.js</value>
+    <value key="deps">jquery</value>
+    <value key="css">
+      <element>++resource++operun.frontpage/frontpage.less</element>
+    </value>
+  </records>
+
+  <records interface='Products.CMFPlone.interfaces.IBundleRegistry' prefix="plone.bundles/frontpage">
+    <value key="resources">
+      <element>frontpage</element>
+    </value>
+    <value key="jscompilation">++resource++operun.frontpage/frontpage-compiled.js</value>
+    <value key="csscompilation">++resource++operun.frontpage/frontpage-compiled.css</value>
+    <value key="enabled">True</value>
+    <value key="compile">True</value>
+    <value key="depends">plone</value>
+    <value key="last_compilation"></value>
+  </records>
+
+</registry>
