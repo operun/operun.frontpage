@@ -12,11 +12,6 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 class IFrontpage(Interface):
 
-    description = schema.TextLine(
-        title=_(u"description", default="Description"),
-        required=False,
-    )
-
     slider = schema.Bool(
         title=_(u"slider", default="Activate Slider"),
         required=False,
