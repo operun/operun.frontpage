@@ -13,17 +13,18 @@ require([
   // Enter Content Here
   $(document).ready(function() {
     // Using Default Configuration
-    $('#carousel').carouFredSel();
+    // $('#carousel').carouFredSel();
 
     // Using Custom Configuration
     $('#carousel').carouFredSel({
       items: 2,
-      direction: "up",
+      direction: "left",
+      responsive: true,
       scroll: {
-        items: 1,
-        easing: "elastic",
-        duration: 1000,
-        pauseOnHover: true
+        items: 2,
+        easing: "linear",
+        duration: 800,
+        pauseOnHover: true,
       }
     });
   });
