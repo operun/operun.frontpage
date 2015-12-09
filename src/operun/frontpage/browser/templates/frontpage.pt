@@ -1,11 +1,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-    lang="en"
-    xml:lang="en"
-    xmlns:tal="http://xml.zope.org/namespaces/tal"
-    xmlns:metal="http://xml.zope.org/namespaces/metal"
-    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    metal:use-macro="context/main_template/macros/master"
-    i18n:domain="plone">
+      lang="en"
+      xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
 
 <body>
 
@@ -25,10 +25,7 @@
               <h2 tal:content="teaser/teaser_title"></h2>
             </div>
 
-            <img tal:define="scales teaser/teaser_image/@@images" tal:replace="structure python: scales.tag('image',
-                width=600,
-                height=400,
-                direction='down')" />
+            <img tal:replace="structure teaser/teaser_image" />
 
             <div class="slider_bottom">
               <p tal:content="teaser/teaser_text"></p>

@@ -79,4 +79,11 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# node and grunt
+node_modules/
+package.json
+Gruntfile.js
+temp_resources
+
 >>>>>>> 9c94bcb8ddaff54da1d5fe5f02a7403fafb761c4
