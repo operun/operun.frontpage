@@ -10,22 +10,6 @@ require([
 ], function($) {
   'use strict';
 
-  // Enter Content Here
-  $(document).ready(function() {
-    // Using Default Configuration
-    // $('#carousel').carouFredSel();
+  // custom stuff
 
-    // Using Custom Configuration
-    $('#carousel').carouFredSel({
-      items: 2,
-      direction: "left",
-      responsive: true,
-      scroll: {
-        items: 2,
-        easing: "linear",
-        duration: 800,
-        pauseOnHover: true,
-      }
-    });
-  });
 });

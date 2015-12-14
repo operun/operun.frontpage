@@ -17,23 +17,63 @@
         <div class="documentDescription description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
       </header>
 
-      <div tal:define="teasers view/teaser_loader" tal:condition="teasers">
-        <div id="carousel">
-          <div tal:repeat="teaser teasers">
+      <section>
 
-            <div class="slider_top">
-              <h2 tal:content="teaser/teaser_title"></h2>
+        <div id="carousel" tal:define="teasers view/teasers" tal:condition="teasers">
+
+          <tal:teasers tal:repeat="teaser teasers">
+
+          <div class="teaser-wrapper">
+            <div class="teaser">
+
+              <div class="teaser-image">
+                <img tal:replace="structure teaser/image" />
+              </div>
+
+              <div class="teaser-text">
+
+                <div class="teaser-title">
+                  <h2 tal:content="teaser/title">Teaser Title</h2>
+                </div>
+
+                <div class="teaser-description">
+                  <p tal:content="teaser/description">Teaser Description</p>
+                </div>
+
+              </div>
+
             </div>
-
-            <img tal:replace="structure teaser/teaser_image" />
-
-            <div class="slider_bottom">
-              <p tal:content="teaser/teaser_text"></p>
-            </div>
-
           </div>
+
+          </tal:teasers>
+
         </div>
-      </div>
+
+      </section>
+
+
+      <script type="text/javascript" tal:content="view/get_js_vars"></script>
+      <script type="text/javascript">
+
+        require([
+          'jquery',
+          'carouFredSel',
+        ], function($) {
+          'use strict';
+
+          $("#carousel").carouFredSel({
+            items: { visible: 1 },
+            scroll: { fx: animation, duration: 500, pauseOnHover: true },
+            auto: false,
+            responsive: true,
+            prev: { button: ".navigation .prev", key: "left" },
+            next: { button: ".navigation .next", key: "right" },
+            //pagination : { container : ".pager" }
+          });
+
+        });
+
+      </script>
 
     </metal:content-core>
   </metal:content-core>

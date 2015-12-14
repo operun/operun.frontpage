@@ -13,32 +13,53 @@ class FrontpageView(BrowserView):
     template = ViewPageTemplateFile('templates/frontpage.pt')
 
     def __call__(self):
-        self.teaser_loader = self.teaser_content()
-
+        """
+        call method of the view
+        """
         return self.template()
 
-    def grab_teaser(self):
-        teasers = self.context.listFolderContents()
+    def get_js_vars(self):
+        """
+        return js code with vars from plone
+        """
+        #registry = getUtility(IRegistry)
+        #settings = registry.forInterface(IAllgeierSettings)
+        autoscroll = 'var autoscroll = %s;' % '10000'
+        animation = 'var animation = "%s";' % 'scroll'
 
-        return teasers
+        vars = autoscroll + animation
 
-    def teaser_content(self):
-        teaser_list = []
+        return vars
 
-        for teaser in self.grab_teaser():
+    def get_teaser(self):
+        """
+        get items from folder contets
+        """
+        items = self.context.listFolderContents(contentFilter={'portal_type':'Teaser'})
+
+        return items
+
+    def teasers(self):
+        """
+        return dict with values to the template
+        """
+        teasers = []
+
+        for teaser in self.get_teaser():
             title = teaser.title
-            text = teaser.description
+            description = teaser.description
+            url = teaser.url
+            tag = None
 
             if teaser.image:
                 images_view = api.content.get_view('images', teaser, self.request)  # noqa
-                tag = images_view.tag('image', width=800, height=200, direction='down')  # noqa
+                tag = images_view.tag('image', width=1200, height=514, direction='down')  # noqa
 
-            teaser_dict = {
-                # Teaser content vaiables.
-                'teaser_title': title,
-                'teaser_text': text,
-                'teaser_image': tag,
-            }
-            teaser_list.append(teaser_dict)
+            data = {'title': title,
+                    'description': description,
+                    'image': tag,
+                    'url': url}
 
-        return teaser_list
+            teasers.append(data)
+
+        return teasers

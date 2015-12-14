@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-"""Module where all interfaces, events and exceptions live."""
-
 from plone.autoform import directives
 from plone.dexterity.content import Item
 
@@ -14,14 +12,14 @@ from plone.namedfile.field import NamedBlobImage
 
 class ITeaser(Interface):
 
-    link = schema.URI(
-        title=_(u'link', default='Link'),
+    url = schema.URI(
+        title=_(u'URL', default='URL'),
         required=False,
     )
 
     image = NamedBlobImage(
-        title=_(u'image', default='Add Image'),
-        required=False,
+        title=_(u'Image', default='Image'),
+        required=True,
     )
 
 
