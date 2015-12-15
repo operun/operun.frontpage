@@ -10,15 +10,10 @@
   <body>
 
     <metal:content-core fill-slot="main">
-      <metal:content-core define-macro="content-core" tal:define="toc context/table_of_contents|nothing;">
+      <metal:content-core define-macro="content-core">
 
-        <header>
-          <h1 class="documentFirstHeading" tal:content="context/title">Title</h1>
-          <div class="documentDescription description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
-        </header>
-
-        <section>
-          <div id="carousel" tal:condition="teasers" tal:define="teasers view/teasers">
+        <section id="section-carousel" tal:define="teasers view/teasers" tal:condition="teasers">
+          <div id="carousel">
             <tal:teasers tal:repeat="teaser teasers">
 
               <div class="teaser-wrapper">
@@ -45,6 +40,12 @@
           </div>
         </section>
 
+        <section id="section-text" tal:condition="context/show_text">
+          <h1 class="documentFirstHeading" tal:content="context/title" tal:condition="context/show_title">Title</h1>
+          <div class="documentDescription description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
+          <div id="parent-fieldname-text" tal:content="structure python:context.text.output_relative_to(view.context)" />
+        </section>
+
         <script tal:content="view/get_js_vars" type="text/javascript"></script>
         <script type="text/javascript">
 
@@ -56,11 +57,10 @@
 
             $(window).load( function(){
               $("#carousel").carouFredSel({
-                items: {visible: 1},
-                scroll: {fx: animation, duration: 500, pauseOnHover: true},
-                auto: false,
+                items: { visible: 1 },
+                scroll: { fx: animation, duration: 500, pauseOnHover: true },
                 responsive: true,
-                auto: true,
+                auto: autoscroll,
                 prev: {button: ".navigation .prev", key: "left"},
                 next: {button: ".navigation .next", key: "right"}
               });

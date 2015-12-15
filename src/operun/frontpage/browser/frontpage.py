@@ -21,7 +21,7 @@ class FrontpageView(BrowserView):
         """
         Return CarouFredSel variables to template.
         """
-        autoscroll = 'var autoscroll = %s;' % '10000'
+        autoscroll = 'var autoscroll = %s;' % '8000'
         animation = 'var animation = "%s";' % 'scroll'
         vars = autoscroll + animation
 
@@ -60,4 +60,7 @@ class FrontpageView(BrowserView):
 
             dictionary.append(data)
 
-        return dictionary
+        if self.context.show_carousel:
+            return dictionary
+        else:
+            return None
