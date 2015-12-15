@@ -7,8 +7,11 @@
   display: block;
   float: left;
   width: 100%;
-  /*padding-top: 42.85%;*/
   content: '';
+  /*
+  "21:9 Aspect "
+  padding-top: 42.85%;
+  */
 }
 .teaser-wrapper {
   position: relative;
@@ -18,106 +21,10 @@
 .teaser {
   top: 0;
   right: 0;
-  /* Teaser containers */
-  /* Teaser contents */
-  /*
-
-  #frontpage-teaser .teaser .title {
-  	display: inline-block;
-  	background-color: rgba(0, 0, 0, 0.2);
-  	color: #fff;
-  	font-size: 200%;
-  	padding: 10px;
-  	padding-left: 30px;
-  	}
-
-  #frontpage-teaser .teaser .title a {
-  	color: #fff !important;
-  	text-decoration: none;
-  	}
-
-  #frontpage-teaser .teaser .description {
-  	display: block;
-  	color: #fff;
-  	font-size: 140%;
-  	padding: 10px;
-  	padding-left: 30px;
-  	line-height: 1.5em;
-  	text-shadow: 0 0 30px #000000;
-  	}
-
-  #frontpage-teaser .navigation {
-  	position: absolute;
-  	top: 132px;
-  	}
-
-  #frontpage-teaser a.browse {
-      background:url(&dtml-portal_url;/++resource++allgeier.theme.images/buttons-75.png) no-repeat;
-      display: inline-block;
-      width: 50px;
-      height: 75px;
-      cursor: pointer;
-      font-size: 0px;
-      position: absolute;
-      }
-
-  #frontpage-teaser a.left {}
-  #frontpage-teaser a.left:hover  { background-position: -100px 0; }
-  #frontpage-teaser a.left:active { background-position: -100px 0; }
-
-  #frontpage-teaser a.right { margin-left: 910px; background-position: -50px 0; }
-  #frontpage-teaser a.right:hover { background-position: -150px 0; }
-  #frontpage-teaser a.right:active { background-position: -150px 0; }
-
-  #frontpage-teaser a.disabled { visibility:hidden !important; }
-
-*/
   bottom: 0;
   left: 0;
   display: block;
   float: left;
-}
-.teaser #carousel {
-  position: relative;
-  margin-bottom: 20px;
-}
-.teaser .teaser-wrapper:before {
-  display: block;
-  float: left;
-  width: 100%;
-  /*
-  "21:9 Aspect "
-  padding-top: 42.85%;
-  */
-  content: '';
-}
-.teaser .teaser-wrapper {
-  position: relative;
-  display: block;
-  float: left;
-}
-.teaser .teaser {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  float: left;
-}
-.teaser .teaser-image img {
-  width: 100%;
-  height: 100%;
-}
-.teaser .teaser-text {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
-  color: #fff;
-}
-.teaser .teaser-text h2 {
-  margin-bottom: 320px;
-  font-size: 3em;
 }
 /* Teaser contents */
 .teaser-image img {
