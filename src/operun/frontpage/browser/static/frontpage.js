@@ -10,6 +10,6 @@ require([
 ], function($) {
   'use strict';
 
-  // custom stuff
+  // Custom variables
 
 });

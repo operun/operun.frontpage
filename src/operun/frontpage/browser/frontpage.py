@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 """Module where functions for content are executed."""
 
@@ -14,36 +13,34 @@ class FrontpageView(BrowserView):
 
     def __call__(self):
         """
-        call method of the view
+        Call template.
         """
         return self.template()
 
     def get_js_vars(self):
         """
-        return js code with vars from plone
+        Return CarouFredSel variables to template.
         """
-        #registry = getUtility(IRegistry)
-        #settings = registry.forInterface(IAllgeierSettings)
         autoscroll = 'var autoscroll = %s;' % '10000'
         animation = 'var animation = "%s";' % 'scroll'
-
         vars = autoscroll + animation
 
         return vars
 
     def get_teaser(self):
         """
-        get items from folder contets
+        Get folder contents from container.
         """
-        items = self.context.listFolderContents(contentFilter={'portal_type':'Teaser'})
+        items = self.context.listFolderContents(
+            contentFilter={'portal_type': 'Teaser'})
 
         return items
 
     def teasers(self):
         """
-        return dict with values to the template
+        Return dictionary values to template.
         """
-        teasers = []
+        dictionary = []
 
         for teaser in self.get_teaser():
             title = teaser.title
@@ -58,8 +55,9 @@ class FrontpageView(BrowserView):
             data = {'title': title,
                     'description': description,
                     'image': tag,
-                    'url': url}
+                    'url': url,
+                    }
 
-            teasers.append(data)
+            dictionary.append(data)
 
         return teasers
