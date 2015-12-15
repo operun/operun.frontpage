@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-"""Module where functions for content are executed."""
-
 from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
@@ -26,6 +24,33 @@ class FrontpageView(BrowserView):
         vars = autoscroll + animation
 
         return vars
+
+    def news(self):
+        """
+        Get news items from the catalog and return objects
+        """
+        brains = api.content.find(portal_type='News Item')
+
+        items = []
+        for item in brains:
+            obj = item.getObject()
+            title = obj.title
+            description = obj.description
+            url = obj.absolute_url()
+
+            if obj.image:
+                images_view = api.content.get_view('images', obj, self.request)  # noqa
+                tag = images_view.tag('image', width=360, height=180, direction='down')  # noqa
+
+            data = {'title': title,
+                    'description': description,
+                    'image': tag,
+                    'url': url,
+                    }
+
+            items.append(data)
+
+        return items[:3]
 
     def get_teaser(self):
         """
