@@ -7,11 +7,8 @@
   display: block;
   float: left;
   width: 100%;
+  /*padding-top: 42.85%;*/
   content: '';
-  /*
-  "21:9 Aspect "
-  padding-top: 42.85%;
-  */
 }
 .teaser-wrapper {
   position: relative;
@@ -38,12 +35,7 @@
   left: 30px;
   color: #fff;
 }
-.teaser-text h2 {
-  font-size: 3em;
-  margin-bottom: 320px;
-}
 /*
-
   #frontpage-teaser .teaser .title {
   	display: inline-block;
   	background-color: rgba(0, 0, 0, 0.2);
@@ -92,6 +84,8 @@
   #frontpage-teaser a.right:active { background-position: -150px 0; }
 
   #frontpage-teaser a.disabled { visibility:hidden !important; }
-
+*/
+/*
+  #sourceMappingURL=frontpage-compiled.css.map
 */
 /*# sourceMappingURL=frontpage-compiled.css.map */
