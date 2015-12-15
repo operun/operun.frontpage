@@ -49,29 +49,21 @@
         <script type="text/javascript">
 
           require([
-            'jquery', 'carouFredSel'
+            'jquery',
+            'carouFredSel'
           ], function ($) {
             'use strict';
 
-            $("#carousel").carouFredSel({
-              items: {
-                visible: 1
-              },
-              scroll: {
-                fx: animation,
-                duration: 500,
-                pauseOnHover: true
-              },
-              auto: false,
-              responsive: true,
-              prev: {
-                button: ".navigation .prev",
-                key: "left"
-              },
-              next: {
-                button: ".navigation .next",
-                key: "right"
-              }
+            $(window).load( function(){
+              $("#carousel").carouFredSel({
+                items: {visible: 1},
+                scroll: {fx: animation, duration: 500, pauseOnHover: true},
+                auto: false,
+                responsive: true,
+                auto: true,
+                prev: {button: ".navigation .prev", key: "left"},
+                next: {button: ".navigation .next", key: "right"}
+              });
             });
           });
         </script>
