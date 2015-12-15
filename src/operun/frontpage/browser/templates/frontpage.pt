@@ -14,8 +14,27 @@
 
         <section id="frontpage-carousel" tal:define="teasers view/teasers" tal:condition="teasers">
             <tal:teasers tal:repeat="teaser teasers">
-              <div class="teaser-wrapper">
-                <div class="teaser">
+              <div class="teaser-wrapper" tal:define="url teaser/url">
+
+                <!-- teaser with url -->
+                <div class="teaser" tal:condition="url">
+                  <a href="" tal:attributes="href url">
+                  <div class="teaser-image">
+                    <img tal:replace="structure teaser/image"/>
+                  </div>
+                  <div class="teaser-text">
+                    <div class="teaser-title">
+                      <h2 tal:content="teaser/title">Teaser Title</h2>
+                    </div>
+                    <div class="teaser-description">
+                      <p tal:content="teaser/description">Teaser Description</p>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <!-- teaser with url -->
+                <div class="teaser" tal:condition="not:url">
                   <div class="teaser-image">
                     <img tal:replace="structure teaser/image"/>
                   </div>
@@ -28,6 +47,7 @@
                     </div>
                   </div>
                 </div>
+
               </div>
             </tal:teasers>
         </section>
@@ -43,9 +63,11 @@
               <div class="news-title">
                 <h3 tal:content="item/title">Teaser Title</h3>
               </div>
+              <a href="" tal:attributes="href item/url">
               <div class="news-image">
                 <img tal:replace="structure item/image"/>
               </div>
+              </a>
               <div class="news-description">
                 <p tal:content="item/description">Teaser Description</p>
               </div>
