@@ -49,8 +49,10 @@ class FrontpageView(BrowserView):
             tag = None
 
             if teaser.image:
-                images_view = api.content.get_view('images', teaser, self.request)  # noqa
-                tag = images_view.tag('image', width=1200, height=514, direction='down')  # noqa
+                images_view = api.content.get_view(
+                    'images', teaser, self.request)
+                tag = images_view.tag(
+                    'image', width=1200, height=514, direction='down')
 
             data = {'title': title,
                     'description': description,
@@ -60,4 +62,4 @@ class FrontpageView(BrowserView):
 
             dictionary.append(data)
 
-        return teasers
+        return dictionary
