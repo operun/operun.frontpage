@@ -10,7 +10,7 @@ class IFrontpage(Interface):
 
     text = RichText(
         title=_(u'frontpage_text_title', default=u'Text'),
-        description=_(u'frontpage_text_description', default=u'Enter text that will be displayed on top of the listing.'),  # noqa
+        description=_(u'frontpage_text_description', default=u'Enter text that will be displayed below the carousel.'),  # noqa
         required=False,
         )
 
