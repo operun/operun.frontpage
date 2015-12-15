@@ -13,60 +13,44 @@
       <metal:content-core define-macro="content-core">
 
         <section id="frontpage-carousel" tal:define="teasers view/teasers" tal:condition="teasers">
-
             <tal:teasers tal:repeat="teaser teasers">
-
               <div class="teaser-wrapper">
                 <div class="teaser">
-
                   <div class="teaser-image">
                     <img tal:replace="structure teaser/image"/>
                   </div>
-
                   <div class="teaser-text">
                     <div class="teaser-title">
                       <h2 tal:content="teaser/title">Teaser Title</h2>
                     </div>
-
                     <div class="teaser-description">
                       <p tal:content="teaser/description">Teaser Description</p>
                     </div>
                   </div>
-
                 </div>
               </div>
-
             </tal:teasers>
-
         </section>
 
-        <section id="section-text" tal:condition="context/show_text">
+        <section id="frontpage-text" tal:condition="context/show_text">
           <h1 class="documentFirstHeading" tal:content="context/title" tal:condition="context/show_title">Title</h1>
           <div class="documentDescription description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
-          <div id="parent-fieldname-text" tal:content="structure python:context.text.output_relative_to(view.context)" />
+          <div id="parent-fieldname-text" tal:content="structure python:context.text.output_relative_to(view.context)" tal:condition="context/text" />
         </section>
 
-
         <section id="frontpage-news" tal:define="news view/news" tal:condition="news">
-
             <div class="news-item" tal:repeat="item news">
-
               <div class="news-title">
                 <h3 tal:content="item/title">Teaser Title</h3>
               </div>
-
               <div class="news-image">
                 <img tal:replace="structure item/image"/>
               </div>
-
               <div class="news-description">
                 <p tal:content="item/description">Teaser Description</p>
               </div>
-
             </div>
-
         </section>
-
 
         <script tal:content="view/get_js_vars" type="text/javascript"></script>
         <script type="text/javascript">

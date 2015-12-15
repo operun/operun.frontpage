@@ -47,7 +47,7 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 }
 /* news item styling */
 #frontpage-news {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .news-item {
   width: 360px;
