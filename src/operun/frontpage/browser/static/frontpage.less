@@ -16,6 +16,14 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
   content: '';
 }
 
+/* Media scaling */
+
+@media screen and (max-width: 480px) {
+  #frontpage-carousel {
+    display: none;
+  }
+}
+
 /* Teaser styling */
 
 #frontpage-carousel {
@@ -85,3 +93,5 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 .news-item:nth-child(3n) {
   margin: 0 0 30px 0;
 }
+
+/* Navigation */

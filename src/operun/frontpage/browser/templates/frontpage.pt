@@ -17,6 +17,10 @@
 
               <!-- Teaser with URL -->
               <div class="teaser" tal:condition="url">
+                <!--<div class="nav">
+                  <label class="prev">&#x2039;</label>
+                  <label class="next">&#x203a;</label>
+                </div>-->
                 <a href="" tal:attributes="href url">
                   <div class="teaser-image">
                     <img tal:replace="structure teaser/image"/>
@@ -34,6 +38,10 @@
 
               <!-- Teaser without URL -->
               <div class="teaser" tal:condition="not:url">
+                <!--<div class="nav">
+                  <label class="prev">&#x2039;</label>
+                  <label class="next">&#x203a;</label>
+                </div>-->
                 <div class="teaser-image">
                   <img tal:replace="structure teaser/image"/>
                 </div>
@@ -77,20 +85,21 @@
         <script type="text/javascript">
 
           require([
-            'jquery',
-            'carouFredSel'
+            'jquery', 'carouFredSel'
           ], function ($) {
             'use strict';
 
-            $(window).load(function () {
+            $(window).on("load resize", function () {
               $("#frontpage-carousel").carouFredSel({
-                scroll: {fx: animation, duration: 700, pauseOnHover: true, },
-                items: {visible: 1, }, responsive: true, auto: autoscroll,
-                prev: {button: ".navigation .prev", key: "left", },
-                next: {button: ".navigation .next", key: "right", }
+                scroll: {fx: animation, duration: 700, pauseOnHover: true},
+                items: {visible: 1},
+                responsive: true, auto: autoscroll,
+                prev: {button: ".nav .prev", key: "left"},
+                next: {button: ".nav .next", key: "right"}
               });
             });
-          });
+          })
+
         </script>
 
       </metal:content-core>
