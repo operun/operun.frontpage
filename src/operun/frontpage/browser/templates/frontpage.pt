@@ -92,7 +92,10 @@
             $(window).on("load resize", function () {
               $("#frontpage-carousel").carouFredSel({
                 items: {visible: 1},
-                responsive: true, auto: autoscroll, easing: 'quadratic',
+                responsive: true,
+                auto: autoscroll,
+                easing: 'quadratic',
+                swipe: onTouch: true,
                 scroll: {fx: animation, duration: 600, pauseOnHover: true},
                 prev: {button: ".navigation .prev", key: "left"},
                 next: {button: ".navigation .next", key: "right"}
