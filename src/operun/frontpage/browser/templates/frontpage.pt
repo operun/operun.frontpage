@@ -57,7 +57,7 @@
           <div id="parent-fieldname-text" tal:condition="context/text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
         </section>
 
-        <section id="frontpage-news" tal:condition="news" tal:define="news view/news">
+        <section id="frontpage-news" tal:condition="news" tal:define="news view/get_news">
           <div class="news-item" tal:repeat="item news">
             <div class="news-title">
               <h3 tal:content="item/title">Teaser Title</h3>
