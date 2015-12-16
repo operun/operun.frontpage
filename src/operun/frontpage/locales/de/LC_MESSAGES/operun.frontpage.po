@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-12-15 16:22+0000\n"
+"POT-Creation-Date: 2015-12-16 10:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,73 +22,80 @@ msgstr "Frontpage"
 msgid "Teaser"
 msgstr "Teaser"
 
-#. Default: "Activate to show the carousel on the frontpage."
-#: operun/frontpage/content/frontpage.py:19
+#. Default: "Select to display a carousel on the frontpage."
+#: operun/frontpage/content/frontpage.py:20
+#, fuzzy
 msgid "frontpage_show_carousel_description"
 msgstr "Checkbox aktivieren um Teaser auf der Startseite anzuzeigen."
 
 #. Default: "Show carousel"
-#: operun/frontpage/content/frontpage.py:18
+#: operun/frontpage/content/frontpage.py:19
 msgid "frontpage_show_carousel_title"
 msgstr "Teaser anzeigen"
 
-#. Default: "Activate to show news items on the frontpage."
-#: operun/frontpage/content/frontpage.py:37
+#. Default: "Enable to display news tiles below carousel."
+#: operun/frontpage/content/frontpage.py:38
+#, fuzzy
 msgid "frontpage_show_news_description"
-msgstr "Checkbox aktivieren um Nachrichten auf der Startseite anzuzeigen"
+msgstr "Checkbox aktivieren um Nachrichten auf der Startseite anzuzeigen."
 
 #. Default: "Show news"
-#: operun/frontpage/content/frontpage.py:36
+#: operun/frontpage/content/frontpage.py:37
 msgid "frontpage_show_news_title"
 msgstr "Nachrichten anzeigen"
 
-#. Default: "Activate to show text section below the carousel."
-#: operun/frontpage/content/frontpage.py:25
+#. Default: "Enable or disable text below carousel."
+#: operun/frontpage/content/frontpage.py:26
+#, fuzzy
 msgid "frontpage_show_text_description"
 msgstr "Checkbox aktivieren um Text unter dem Teaser anzuzeigen."
 
 #. Default: "Show text"
-#: operun/frontpage/content/frontpage.py:24
+#: operun/frontpage/content/frontpage.py:25
 msgid "frontpage_show_text_title"
 msgstr "Text anzeigen"
 
-#. Default: "Activate to show title on the frontpage."
-#: operun/frontpage/content/frontpage.py:31
+#. Default: "Enable or disable frontpage title."
+#: operun/frontpage/content/frontpage.py:32
+#, fuzzy
 msgid "frontpage_show_title_description"
 msgstr "Checkbox aktivieren um den Titel auf der Startseite anzuzeigen."
 
 #. Default: "Show title"
-#: operun/frontpage/content/frontpage.py:30
+#: operun/frontpage/content/frontpage.py:31
 msgid "frontpage_show_title_title"
 msgstr "Titel anzeigen"
 
-#. Default: "Enter text that will be displayed below the carousel."
-#: operun/frontpage/content/frontpage.py:13
+#. Default: "Add a description below the carousel."
+#: operun/frontpage/content/frontpage.py:14
+#, fuzzy
 msgid "frontpage_text_description"
 msgstr "Geben Sie einen Text ein, der unter dem Teaser angezeigt wird."
 
 #. Default: "Text"
-#: operun/frontpage/content/frontpage.py:12
+#: operun/frontpage/content/frontpage.py:13
 msgid "frontpage_text_title"
 msgstr "Text"
 
-#. Default: "Upload a teaser image."
-#: operun/frontpage/content/teaser.py:23
+#. Default: "Upload an image to accompany your teaser."
+#: operun/frontpage/content/teaser.py:20
+#, fuzzy
 msgid "teaser_image_description"
 msgstr "Teaser Bild hochladen."
 
 #. Default: "Image"
-#: operun/frontpage/content/teaser.py:22
+#: operun/frontpage/content/teaser.py:19
 msgid "teaser_image_title"
 msgstr "Bild"
 
-#. Default: "Enter a teaser url."
-#: operun/frontpage/content/teaser.py:17
+#. Default: "Add a URL to the teaser."
+#: operun/frontpage/content/teaser.py:14
+#, fuzzy
 msgid "teaser_url_description"
 msgstr "Geben Sie eine URL an."
 
 #. Default: "URL"
-#: operun/frontpage/content/teaser.py:16
+#: operun/frontpage/content/teaser.py:13
 msgid "teaser_url_title"
 msgstr "URL"
 

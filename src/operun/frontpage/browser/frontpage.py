@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+
 from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
 from plone import api
 
 
@@ -13,6 +13,7 @@ class FrontpageView(BrowserView):
         """
         Call template.
         """
+
         return self.template()
 
     def get_js_vars(self):
@@ -25,9 +26,9 @@ class FrontpageView(BrowserView):
 
         return vars
 
-    def news(self):
+    def get_news(self):
         """
-        Get news items from the catalog and return objects
+        Get news items from the catalog and return its objects.
         """
         brains = api.content.find(portal_type='News Item')
 

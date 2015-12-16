@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 from plone import api
@@ -8,14 +9,18 @@ from plone import api
 class HiddenProfiles(object):
 
     def getNonInstallableProfiles(self):
-        """Hide uninstall profile from site-creation and quickinstaller"""
+        """
+        Hide uninstall profile from site-creation and quickinstaller.
+        """
         return [
             'operun.frontpage:uninstall',
         ]
 
 
 def post_install(context):
-    """Post install script"""
+    """
+    Post install script.
+    """
     if context.readDataFile('operunfrontpage_default.txt') is None:
         return
     # Do something during the installation of this package
@@ -24,7 +29,9 @@ def post_install(context):
 
 
 def uninstall(context):
-    """Uninstall script"""
+    """
+    Uninstall script.
+    """
     if context.readDataFile('operunfrontpage_uninstall.txt') is None:
         return
     # Do something during the uninstallation of this package
@@ -32,7 +39,7 @@ def uninstall(context):
 
 def _displayed_types():
     """
-    Add Frontpage to displayed types
+    Add Frontpage to displayed types.
     """
     types = api.portal.get_registry_record('plone.displayed_types')
     types = types + (u'Frontpage',)
@@ -41,7 +48,7 @@ def _displayed_types():
 
 def _default_page_types():
     """
-    Add Frontpage to default page types
+    Add Frontpage to default page types.
     """
     types = api.portal.get_registry_record('plone.default_page_types')
     types.append(u'Frontpage')
