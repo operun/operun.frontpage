@@ -91,9 +91,9 @@
 
             $(window).on("load resize", function () {
               $("#frontpage-carousel").carouFredSel({
-                scroll: {fx: animation, duration: 700, pauseOnHover: true},
+                scroll: {fx: animation, duration: 600, pauseOnHover: true},
                 items: {visible: 1},
-                responsive: true, auto: autoscroll,
+                responsive: true, auto: autoscroll, easing: 'cubic',
                 prev: {button: ".nav .prev", key: "left"},
                 next: {button: ".nav .next", key: "right"}
               });

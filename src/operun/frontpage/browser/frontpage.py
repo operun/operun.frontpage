@@ -20,8 +20,8 @@ class FrontpageView(BrowserView):
         """
         Return CarouFredSel variables to template.
         """
-        autoscroll = 'var autoscroll = %s;' % '8000'
-        animation = 'var animation = "%s";' % 'scroll'
+        autoscroll = 'var autoscroll = %s;' % '6000'
+        animation = 'var animation = "%s";' % 'directscroll'
         vars = autoscroll + animation
 
         return vars
