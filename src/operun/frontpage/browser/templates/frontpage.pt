@@ -67,14 +67,14 @@
 
         <section id="frontpage-news" tal:condition="news" tal:define="news view/get_news">
           <div class="news-item" tal:repeat="item news">
-            <div class="news-title">
-              <h3 tal:content="item/title">Teaser Title</h3>
-            </div>
             <a href="" tal:attributes="href item/url">
               <div class="news-image">
                 <img tal:replace="structure item/image"/>
               </div>
             </a>
+            <div class="news-title">
+              <h3 tal:content="item/title">Teaser Title</h3>
+            </div>
             <div class="news-description">
               <p tal:content="item/description">Teaser Description</p>
             </div>
