@@ -1,13 +1,3 @@
-/* Breakpoint scaling
-
-size_1 = 360px
-size_1 = 480px
-size_3 = 769px
-size_4 = 1111px
-size_5 = 1320px
-
-*/
-/*=========================================================== Custom icons ===========================================================*/
 body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-frontpage::after {
   content: '';
 }
@@ -20,9 +10,8 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-teaser::after {
 body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before {
   content: '';
 }
-/*=========================================================== Teaser styling ===========================================================*/
 #frontpage-carousel {
-  margin: 30px 0;
+  margin-bottom: 30px;
 }
 .teaser-wrapper:before {
   display: block;
@@ -54,9 +43,15 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
   width: 100%;
   height: 100%;
 }
-/*=========================================================== News styling ===========================================================*/
+#frontpage-text {
+  margin-bottom: 30px;
+}
 #frontpage-news {
   margin-bottom: 30px;
+}
+.news-item {
+  float: left;
+  margin-bottom: 20px;
 }
 .news-title {
   margin-bottom: 15px;
@@ -68,55 +63,35 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 .news-image {
   margin-bottom: 15px;
 }
-.news-item {
-  float: left;
-  width: 360px;
-  margin: 0 30px 30px 0;
+.news-image img {
+  width: 100%;
+  height: auto;
 }
-.news-item:nth-child(3n) {
-  margin: 0 0 30px 0;
-}
-/*=========================================================== size_1 ===========================================================*/
-/*=========================================================== size_2 ===========================================================*/
-@media screen and (max-width: 480px) {
-  #frontpage-carousel {
-    display: none;
-    margin: 0 0;
-  }
-}
-/*=========================================================== size_3 ===========================================================*/
-@media screen and (max-width: 769px) {
+@media (min-width: 768px) {
   .news-item {
-    width: 100% !important;
-    margin: 0 0 30px 0 !important;
-  }
-  .news-item:nth-child(3n) {
-    margin: 0 0 0 0 !important;
+    width: 350px;
+    margin-right: 20px;
   }
   .news-item:nth-child(2n) {
-    margin: 0 0 0 0 !important;
+    margin-right: 0;
   }
 }
-/*=========================================================== size_4 ===========================================================*/
-@media screen and (max-width: 1111px) {
-  #frontpage-news .news-item {
-    width: 345px;
-  }
-}
-/*=========================================================== size_5 ===========================================================*/
-@media screen and (max-width: 1320px) {
+@media (min-width: 992px) {
   .news-item {
-    width: 455px;
-  }
-  .news-item:nth-child(3n) {
-    margin: 0 30px 30px 0;
+    width: 460px;
+    margin-right: 20px;
   }
   .news-item:nth-child(2n) {
-    margin: 0 0 30px 0;
+    margin-right: 0;
   }
-  .news-item img {
-    width: 100%;
-    height: 100%;
+}
+@media (min-width: 1200px) {
+  .news-item {
+    width: 366px;
+    margin-right: 21px;
+  }
+  .news-item:nth-child(3n) {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=frontpage-compiled.css.map */
