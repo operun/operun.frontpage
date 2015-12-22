@@ -16,6 +16,21 @@ class FrontpageView(BrowserView):
 
         return self.template()
 
+    def crop(self, text, count):
+        """ crop given text to given count
+        """
+        cropped_text = ' '.join((text[0:count].strip()).split(' ')[:-1]);
+
+        strips = ['.', ',', ':', ';']
+        for s in strips:
+            cropped_text = cropped_text.strip(s)
+
+        if len(text) > count:
+            return cropped_text + u'…'
+        else:
+            return text
+
+
     def get_js_vars(self):
         """
         Return CarouFredSel variables to template.
@@ -43,15 +58,15 @@ class FrontpageView(BrowserView):
                 images_view = api.content.get_view('images', obj, self.request)  # noqa
                 tag = images_view.tag('image', width=480, height=209, direction='down')  # noqa
 
-            data = {'title': title,
-                    'description': description,
+            data = {'title': self.crop(title, 65),
+                    'description': self.crop(description, 265),
                     'image': tag,
                     'url': url,
                     }
 
             items.append(data)
 
-        return items[:3]
+        return items
 
     def get_teaser(self):
         """
