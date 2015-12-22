@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-12-16 10:47+0000\n"
+"POT-Creation-Date: 2015-12-22 14:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,16 @@ msgstr ""
 
 #: operun/frontpage/profiles/default/types/Teaser.xml
 msgid "Teaser"
+msgstr ""
+
+#. Default: "Limit the number of displayed items."
+#: operun/frontpage/content/frontpage.py:44
+msgid "frontpage_limit_news_description"
+msgstr ""
+
+#. Default: "Number of News items"
+#: operun/frontpage/content/frontpage.py:43
+msgid "frontpage_limit_news_title"
 msgstr ""
 
 #. Default: "Select to display a carousel on the frontpage."

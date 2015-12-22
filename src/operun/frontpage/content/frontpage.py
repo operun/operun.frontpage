@@ -39,6 +39,13 @@ class IFrontpage(Interface):
         required=False,
     )
 
+    limit_news = schema.Int(
+        title=_(u"frontpage_limit_news_title", default="Number of News items"),
+        description=_(u'frontpage_limit_news_description', default=u'Limit the number of displayed items.'),  # noqa
+        required=False,
+        default=6,
+    )
+
 
 class Frontpage(Container):
     """

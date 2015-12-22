@@ -44,7 +44,10 @@ class FrontpageView(BrowserView):
         """
         Get news items from the catalog and return its objects.
         """
-        brains = api.content.find(portal_type='News Item')
+        brains = api.content.find(portal_type='News Item',
+                                  review_state='published',
+                                  sort_on='Date',
+                                  sort_order='reverse')
 
         items = []
         for item in brains:
@@ -65,7 +68,14 @@ class FrontpageView(BrowserView):
 
             items.append(data)
 
-        return items
+        limit = self.context.limit_news
+        if limit:
+            if len(items) > limit:
+                return items[:limit]
+            else:
+                return items
+        else:
+            return items
 
     def get_teaser(self):
         """
