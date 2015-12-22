@@ -19,7 +19,7 @@ class FrontpageView(BrowserView):
     def crop(self, text, count):
         """ crop given text to given count
         """
-        cropped_text = ' '.join((text[0:count].strip()).split(' ')[:-1]);
+        cropped_text = ' '.join((text[0:count].strip()).split(' ')[:-1])
 
         strips = ['.', ',', ':', ';']
         for s in strips:
@@ -29,7 +29,6 @@ class FrontpageView(BrowserView):
             return cropped_text + u'…'
         else:
             return text
-
 
     def get_js_vars(self):
         """
