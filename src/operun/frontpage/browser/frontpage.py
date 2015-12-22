@@ -67,6 +67,8 @@ class FrontpageView(BrowserView):
             if obj.image:
                 images_view = api.content.get_view('images', obj, self.request)  # noqa
                 tag = images_view.tag('image', width=480, height=209, direction='down')  # noqa
+            else:
+                tag = None
 
             data = {'title': self.crop(title, 65),
                     'description': self.crop(description, 265),
