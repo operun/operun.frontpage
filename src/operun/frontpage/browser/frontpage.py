@@ -34,11 +34,19 @@ class FrontpageView(BrowserView):
         """
         Return CarouFredSel variables to template.
         """
-        autoscroll = 'var autoscroll = %s;' % '6000'
-        animation = 'var animation = "%s";' % 'directscroll'
-        vars = autoscroll + animation
+        animation = self.context.carousel_animation
+        if animation:
+            animation = 'var animation = "%s";' % animation
+        else:
+            animation = 'var animation = "none";'
 
-        return vars
+        autoscroll = self.context.carousel_autoscroll
+        if autoscroll:
+            autoscroll = 'var autoscroll = %s;' % autoscroll
+        else:
+            autoscroll = 'var autoscroll = %s;' % '5000'
+
+        return autoscroll + animation
 
     def get_news(self):
         """

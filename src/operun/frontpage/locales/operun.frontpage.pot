@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-12-22 14:30+0000\n"
+"POT-Creation-Date: 2015-12-22 15:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,71 +17,139 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: operun.frontpage\n"
 
+#: operun/frontpage/content/frontpage.py:19
+msgid "Cover"
+msgstr ""
+
+#: operun/frontpage/content/frontpage.py:20
+msgid "Coverfade"
+msgstr ""
+
+#: operun/frontpage/content/frontpage.py:18
+msgid "Crossfade"
+msgstr ""
+
+#: operun/frontpage/content/frontpage.py:16
+msgid "Directscroll"
+msgstr ""
+
+#: operun/frontpage/content/frontpage.py:17
+msgid "Fade"
+msgstr ""
+
 #: operun/frontpage/profiles/default/types/Frontpage.xml
 msgid "Frontpage"
+msgstr ""
+
+#: operun/frontpage/content/frontpage.py:15
+msgid "Scroll"
 msgstr ""
 
 #: operun/frontpage/profiles/default/types/Teaser.xml
 msgid "Teaser"
 msgstr ""
 
+#: operun/frontpage/content/frontpage.py:22
+msgid "Uncoverfade"
+msgstr ""
+
+#. Default: "Select animation to use for the transition."
+#: operun/frontpage/content/frontpage.py:69
+msgid "frontpage_carousel_animation_description"
+msgstr ""
+
+#. Default: "Animation"
+#: operun/frontpage/content/frontpage.py:68
+msgid "frontpage_carousel_animation_title"
+msgstr ""
+
+#. Default: "Select delay for the animation."
+#: operun/frontpage/content/frontpage.py:76
+msgid "frontpage_carousel_autoscroll_description"
+msgstr ""
+
+#. Default: "Autoscroll"
+#: operun/frontpage/content/frontpage.py:75
+msgid "frontpage_carousel_autoscroll_title"
+msgstr ""
+
+#. Default: "Carousel"
+#: operun/frontpage/content/frontpage.py:56
+msgid "frontpage_fieldset_carousel_label"
+msgstr ""
+
+#. Default: "News"
+#: operun/frontpage/content/frontpage.py:82
+msgid "frontpage_fieldset_news_label"
+msgstr ""
+
 #. Default: "Limit the number of displayed items."
-#: operun/frontpage/content/frontpage.py:44
+#: operun/frontpage/content/frontpage.py:94
 msgid "frontpage_limit_news_description"
 msgstr ""
 
 #. Default: "Number of News items"
-#: operun/frontpage/content/frontpage.py:43
+#: operun/frontpage/content/frontpage.py:93
 msgid "frontpage_limit_news_title"
 msgstr ""
 
 #. Default: "Select to display a carousel on the frontpage."
-#: operun/frontpage/content/frontpage.py:20
+#: operun/frontpage/content/frontpage.py:62
 msgid "frontpage_show_carousel_description"
 msgstr ""
 
 #. Default: "Show carousel"
-#: operun/frontpage/content/frontpage.py:19
+#: operun/frontpage/content/frontpage.py:61
 msgid "frontpage_show_carousel_title"
 msgstr ""
 
+#. Default: "Enable or disable frontpage description."
+#: operun/frontpage/content/frontpage.py:43
+msgid "frontpage_show_description_description"
+msgstr ""
+
+#. Default: "Show description"
+#: operun/frontpage/content/frontpage.py:42
+msgid "frontpage_show_description_title"
+msgstr ""
+
 #. Default: "Enable to display news tiles below carousel."
-#: operun/frontpage/content/frontpage.py:38
+#: operun/frontpage/content/frontpage.py:88
 msgid "frontpage_show_news_description"
 msgstr ""
 
 #. Default: "Show news"
-#: operun/frontpage/content/frontpage.py:37
+#: operun/frontpage/content/frontpage.py:87
 msgid "frontpage_show_news_title"
 msgstr ""
 
 #. Default: "Enable or disable text below carousel."
-#: operun/frontpage/content/frontpage.py:26
+#: operun/frontpage/content/frontpage.py:50
 msgid "frontpage_show_text_description"
 msgstr ""
 
 #. Default: "Show text"
-#: operun/frontpage/content/frontpage.py:25
+#: operun/frontpage/content/frontpage.py:49
 msgid "frontpage_show_text_title"
 msgstr ""
 
 #. Default: "Enable or disable frontpage title."
-#: operun/frontpage/content/frontpage.py:32
+#: operun/frontpage/content/frontpage.py:36
 msgid "frontpage_show_title_description"
 msgstr ""
 
 #. Default: "Show title"
-#: operun/frontpage/content/frontpage.py:31
+#: operun/frontpage/content/frontpage.py:35
 msgid "frontpage_show_title_title"
 msgstr ""
 
 #. Default: "Add a description below the carousel."
-#: operun/frontpage/content/frontpage.py:14
+#: operun/frontpage/content/frontpage.py:30
 msgid "frontpage_text_description"
 msgstr ""
 
 #. Default: "Text"
-#: operun/frontpage/content/frontpage.py:13
+#: operun/frontpage/content/frontpage.py:29
 msgid "frontpage_text_title"
 msgstr ""
 
@@ -103,5 +171,9 @@ msgstr ""
 #. Default: "URL"
 #: operun/frontpage/content/teaser.py:13
 msgid "teaser_url_title"
+msgstr ""
+
+#: operun/frontpage/content/frontpage.py:21
+msgid "uncover"
 msgstr ""
 
