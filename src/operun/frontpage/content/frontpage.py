@@ -39,7 +39,7 @@ class IFrontpage(Interface):
     )
 
     show_description = schema.Bool(
-        title=_(u"frontpage_show_description_title", default="Show description"),
+        title=_(u"frontpage_show_description_title", default="Show description"),  # noqa
         description=_(u'frontpage_show_description_description', default=u'Enable or disable frontpage description.'),  # noqa
         required=False,
         default=True,
@@ -53,7 +53,7 @@ class IFrontpage(Interface):
     )
 
     fieldset('carousel',
-             label=_(u'frontpage_fieldset_carousel_label', default=u'Carousel'),
+             label=_(u'frontpage_fieldset_carousel_label', default=u'Carousel'),  # noqa
              fields=('show_carousel', 'carousel_animation', 'carousel_autoscroll'),  # noqa
              )
 
