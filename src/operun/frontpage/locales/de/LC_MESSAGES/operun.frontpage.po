@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-12-22 15:14+0000\n"
+"POT-Creation-Date: 2016-01-13 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,15 @@ msgstr "Scroll"
 msgid "Teaser"
 msgstr "Teaser"
 
+#: operun/frontpage/content/frontpage.py:21
+msgid "Uncover"
+msgstr "Uncover"
+
 #: operun/frontpage/content/frontpage.py:22
 msgid "Uncoverfade"
 msgstr "Uncoverfade"
 
-#. Default: "Select animation to use for the transition."
+#. Default: "Select a transition effect for the carousel."
 #: operun/frontpage/content/frontpage.py:69
 msgid "frontpage_carousel_animation_description"
 msgstr "Wählen Sie die Animatin für den Übergang"
@@ -60,7 +64,7 @@ msgstr "Wählen Sie die Animatin für den Übergang"
 msgid "frontpage_carousel_animation_title"
 msgstr "Animation"
 
-#. Default: "Select delay for the animation."
+#. Default: "Select transition delay for the carousel."
 #: operun/frontpage/content/frontpage.py:76
 msgid "frontpage_carousel_autoscroll_description"
 msgstr "Geben Sie die Dauer zwischen den Animationen an"
@@ -81,12 +85,12 @@ msgid "frontpage_fieldset_news_label"
 msgstr "Nachrichten"
 
 #. Default: "Limit the number of displayed items."
-#: operun/frontpage/content/frontpage.py:94
+#: operun/frontpage/content/frontpage.py:95
 msgid "frontpage_limit_news_description"
 msgstr "Anzahl der Nachrichten begrenzen"
 
 #. Default: "Number of News items"
-#: operun/frontpage/content/frontpage.py:93
+#: operun/frontpage/content/frontpage.py:94
 msgid "frontpage_limit_news_title"
 msgstr "Anzahl der Nachrichten"
 
@@ -103,12 +107,12 @@ msgstr "Teaser anzeigen"
 #. Default: "Enable or disable frontpage description."
 #: operun/frontpage/content/frontpage.py:43
 msgid "frontpage_show_description_description"
-msgstr ""
+msgstr "Checkbox aktivieren um Beschreibung anzuzeigen."
 
 #. Default: "Show description"
 #: operun/frontpage/content/frontpage.py:42
 msgid "frontpage_show_description_title"
-msgstr ""
+msgstr "Beschreibung anzeigen"
 
 #. Default: "Enable to display news tiles below carousel."
 #: operun/frontpage/content/frontpage.py:88
@@ -169,8 +173,4 @@ msgstr "Geben Sie eine URL an."
 #: operun/frontpage/content/teaser.py:13
 msgid "teaser_url_title"
 msgstr "URL"
-
-#: operun/frontpage/content/frontpage.py:21
-msgid "uncover"
-msgstr "Uncover"
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-12-22 15:14+0000\n"
+"POT-Creation-Date: 2016-01-13 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,11 +49,15 @@ msgstr ""
 msgid "Teaser"
 msgstr ""
 
+#: operun/frontpage/content/frontpage.py:21
+msgid "Uncover"
+msgstr ""
+
 #: operun/frontpage/content/frontpage.py:22
 msgid "Uncoverfade"
 msgstr ""
 
-#. Default: "Select animation to use for the transition."
+#. Default: "Select a transition effect for the carousel."
 #: operun/frontpage/content/frontpage.py:69
 msgid "frontpage_carousel_animation_description"
 msgstr ""
@@ -63,7 +67,7 @@ msgstr ""
 msgid "frontpage_carousel_animation_title"
 msgstr ""
 
-#. Default: "Select delay for the animation."
+#. Default: "Select transition delay for the carousel."
 #: operun/frontpage/content/frontpage.py:76
 msgid "frontpage_carousel_autoscroll_description"
 msgstr ""
@@ -84,12 +88,12 @@ msgid "frontpage_fieldset_news_label"
 msgstr ""
 
 #. Default: "Limit the number of displayed items."
-#: operun/frontpage/content/frontpage.py:94
+#: operun/frontpage/content/frontpage.py:95
 msgid "frontpage_limit_news_description"
 msgstr ""
 
 #. Default: "Number of News items"
-#: operun/frontpage/content/frontpage.py:93
+#: operun/frontpage/content/frontpage.py:94
 msgid "frontpage_limit_news_title"
 msgstr ""
 
@@ -171,9 +175,5 @@ msgstr ""
 #. Default: "URL"
 #: operun/frontpage/content/teaser.py:13
 msgid "teaser_url_title"
-msgstr ""
-
-#: operun/frontpage/content/frontpage.py:21
-msgid "uncover"
 msgstr ""
 
