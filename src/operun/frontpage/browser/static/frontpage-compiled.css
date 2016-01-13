@@ -43,6 +43,14 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
   width: 100%;
   height: 100%;
 }
+.teaser-image #image-blackbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  opacity: .6;
+  background-color: #000000;
+}
 #frontpage-text {
   margin-bottom: 30px;
 }
