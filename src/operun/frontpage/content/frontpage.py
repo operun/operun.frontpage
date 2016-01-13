@@ -18,9 +18,9 @@ EffectVocabulary = SimpleVocabulary(
      SimpleTerm(value=u'crossfade', title=_(u'Crossfade')),
      SimpleTerm(value=u'cover', title=_(u'Cover')),
      SimpleTerm(value=u'cover-fade', title=_(u'Coverfade')),
-     SimpleTerm(value=u'uncover', title=_(u'uncover')),
+     SimpleTerm(value=u'uncover', title=_(u'Uncover')),
      SimpleTerm(value=u'uncover-fade', title=_(u'Uncoverfade'))]
-    )
+)
 
 
 class IFrontpage(Interface):
@@ -66,14 +66,14 @@ class IFrontpage(Interface):
 
     carousel_animation = schema.Choice(
         title=_(u'frontpage_carousel_animation_title', default=u'Animation'),
-        description=_(u'frontpage_carousel_animation_description', default=u'Select animation to use for the transition.'),  # noqa
+        description=_(u'frontpage_carousel_animation_description', default=u'Select a transition effect for the carousel.'),  # noqa
         vocabulary=EffectVocabulary,
         required=False,
         )
 
     carousel_autoscroll = schema.Int(
         title=_(u'frontpage_carousel_autoscroll_title', default=u'Autoscroll'),
-        description=_(u'frontpage_carousel_autoscroll_description', default=u'Select delay for the animation.'),  # noqa
+        description=_(u'frontpage_carousel_autoscroll_description', default=u'Select transition delay for the carousel.'),  # noqa
         default=5000,
         required=False,
         )

@@ -17,7 +17,8 @@ class FrontpageView(BrowserView):
         return self.template()
 
     def crop(self, text, count):
-        """ crop given text to given count
+        """
+        Crop given text to given count.
         """
         cropped_text = ' '.join((text[0:count].strip()).split(' ')[:-1])
 

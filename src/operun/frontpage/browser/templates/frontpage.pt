@@ -92,7 +92,6 @@
               });
             });
           })
-
         </script>
 
       </metal:content-core>
