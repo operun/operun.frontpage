@@ -67,7 +67,7 @@ class FrontpageView(BrowserView):
 
             if obj.image:
                 images_view = api.content.get_view('images', obj, self.request)  # noqa
-                tag = images_view.tag('image', direction='down')  # noqa
+                tag = images_view.tag('image', height=165, width=380, direction='down')  # noqa
             else:
                 tag = None
 
@@ -111,7 +111,7 @@ class FrontpageView(BrowserView):
 
             if teaser.image:
                 images_view = api.content.get_view('images', teaser, self.request)  # noqa
-                tag = images_view.tag('image', direction='down')  # noqa
+                tag = images_view.tag('image', height=514, width=1200, direction='down')  # noqa
 
             data = {'title': title,
                     'description': description,

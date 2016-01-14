@@ -41,9 +41,7 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 }
 .teaser-image img {
   width: 100%;
-  max-width: 1200px;
   height: 100%;
-  max-height: 514px;
 }
 .teaser-image #image-blackbar {
   position: absolute;
@@ -65,7 +63,6 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 }
 .news-image img {
   width: 100%;
-  max-width: 380px;
   height: 100%;
 }
 .news-text-wrapper {
