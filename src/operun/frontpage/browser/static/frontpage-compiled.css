@@ -58,7 +58,7 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 }
 /* News Item Parameters */
 .frontpage-news {
-  margin: 0 0 -15px -15px;
+  margin: 0 -15px 0 -15px;
 }
 .news-wrapper {
   margin-bottom: 30px;
