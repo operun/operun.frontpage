@@ -67,11 +67,13 @@
                   <img tal:replace="structure item/image"/>
                 </div>
               </a>
-              <div class="news-title">
-                <h3 tal:content="item/title">Teaser Title</h3>
-              </div>
-              <div class="news-description">
-                <p tal:content="item/description">Teaser Description</p>
+              <div class="news-text-wrapper">
+                <div class="news-title">
+                  <h3 tal:content="item/title">Teaser Title</h3>
+                </div>
+                <div class="news-description">
+                  <p tal:content="item/description">Teaser Description</p>
+                </div>
               </div>
             </div>
           </div>
