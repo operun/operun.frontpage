@@ -19,6 +19,7 @@
               <div class="teaser" tal:condition="url">
                 <a href="" tal:attributes="href url">
                   <div class="teaser-image">
+                    <div id="image-blackbar"></div>
                     <img tal:replace="structure teaser/image"/>
                   </div>
                   <div class="teaser-text">
@@ -52,24 +53,26 @@
           </tal:teasers>
         </section>
 
-        <section id="frontpage-text">
+        <section class="frontpage-text">
           <h1 class="documentFirstHeading" tal:condition="python:context.title and context.show_title" tal:content="context/title">Title</h1>
           <div class="documentDescription description" tal:condition="python:context.description and context.show_description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
           <div id="parent-fieldname-text" tal:condition="python:context.text and context.show_text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
         </section>
 
-        <section id="frontpage-news" tal:condition="news" tal:define="news view/get_news">
-          <div class="news-item" tal:repeat="item news">
-            <a href="" tal:attributes="href item/url">
-              <div class="news-image">
-                <img tal:replace="structure item/image"/>
+        <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
+          <div class="col-xs-6 col-sm-4" tal:repeat="item news">
+            <div class="news-wrapper">
+              <a href="" tal:attributes="href item/url">
+                <div class="news-image">
+                  <img tal:replace="structure item/image"/>
+                </div>
+              </a>
+              <div class="news-title">
+                <h3 tal:content="item/title">Teaser Title</h3>
               </div>
-            </a>
-            <div class="news-title">
-              <h3 tal:content="item/title">Teaser Title</h3>
-            </div>
-            <div class="news-description">
-              <p tal:content="item/description">Teaser Description</p>
+              <div class="news-description">
+                <p tal:content="item/description">Teaser Description</p>
+              </div>
             </div>
           </div>
         </section>
@@ -87,7 +90,7 @@
                 items: {visible: 1},
                 responsive: true,
                 auto: autoscroll,
-                scroll: {fx: animation, duration: 600, pauseOnHover: true},
+                scroll: {fx: animation, duration: 500, pauseOnHover: true},
                 prev: {button: ".navigation .prev", key: "left"},
                 next: {button: ".navigation .next", key: "right"}
               });
