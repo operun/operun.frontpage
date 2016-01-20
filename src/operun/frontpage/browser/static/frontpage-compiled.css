@@ -34,11 +34,12 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 }
 .teaser-text {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
+  width: 100%;
   padding: 20px;
-  opacity: 0.5%;
+  opacity: .5;
   color: #fff;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .teaser-image img {
   width: 100%;
