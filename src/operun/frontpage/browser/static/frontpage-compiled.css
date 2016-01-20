@@ -37,9 +37,14 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
   bottom: 0;
   width: 100%;
   padding: 20px;
-  opacity: .5;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.teaser-title h2 {
+  margin-top: 0;
+}
+.teaser-description p {
+  margin-bottom: 0;
 }
 .teaser-image img {
   width: 100%;

@@ -89,7 +89,7 @@
               $("#frontpage-carousel").carouFredSel({
                 items: {visible: 1},
                 responsive: true,
-                auto: autoscroll,
+                auto: 10000,
                 scroll: {fx: animation, duration: 500, pauseOnHover: true},
                 prev: {button: ".navigation .prev", key: "left"},
                 next: {button: ".navigation .next", key: "right"}
