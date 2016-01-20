@@ -19,7 +19,6 @@
               <div class="teaser" tal:condition="url">
                 <a href="" tal:attributes="href url">
                   <div class="teaser-image">
-                    <div id="image-blackbar"></div>
                     <img tal:replace="structure teaser/image"/>
                   </div>
                   <div class="teaser-text">
@@ -36,7 +35,6 @@
               <!-- Teaser without URL -->
               <div class="teaser" tal:condition="not:url">
                 <div class="teaser-image">
-                  <div id="image-blackbar"></div>
                   <img tal:replace="structure teaser/image"/>
                 </div>
                 <div class="teaser-text">
