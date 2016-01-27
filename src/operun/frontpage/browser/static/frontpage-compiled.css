@@ -58,6 +58,7 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
   margin: 0 -15px 0 -15px;
 }
 .news-wrapper {
+  height: auto;
   margin-bottom: 30px;
 }
 .news-image img {
@@ -66,5 +67,8 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 }
 .news-text-wrapper {
   margin: 0 0 0 1px;
+}
+.js-height {
+  height: auto;
 }
 /*# sourceMappingURL=frontpage-compiled.css.map */

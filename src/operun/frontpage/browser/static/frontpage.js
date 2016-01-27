@@ -12,14 +12,19 @@ require([
 
   // Custom variables
 
-  $(window).on("load resize", function() {
-    var elementHeights = $('.news-wrapper').map(function() {
-      return $(this).height();
-    }).get();
+  $(document).ready(function() {
 
-    var maxHeight = Math.max.apply(null, elementHeights);
+    $('.frontpage-news').each(function() {
 
-    $('.news-wrapper').height(maxHeight);
+      var highestBox = 0;
+      $('.js-height', this).each(function() {
+
+        if ($(this).height() > highestBox)
+          highestBox = $(this).height();
+      });
+
+      $('.js-height', this).height(highestBox);
+
+    });
   });
-
 });
