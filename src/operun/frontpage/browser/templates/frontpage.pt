@@ -1,24 +1,41 @@
 <html i18n:domain="plone"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
-      xml:lang="en" xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xml:lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns="http://www.w3.org/1999/xhtml">
 
-<body>
-  <metal:content-core fill-slot="main">
-    <metal:content-core define-macro="content-core">
+  <body>
+    <metal:content-core fill-slot="main">
+      <metal:content-core define-macro="content-core">
 
-      <section id="frontpage-carousel" tal:condition="teasers" tal:define="teasers view/teasers">
-        <tal:teasers tal:repeat="teaser teasers">
-          <div class="teaser-wrapper" tal:define="url teaser/url">
+        <section id="frontpage-carousel" tal:condition="teasers" tal:define="teasers view/teasers">
+          <tal:teasers tal:repeat="teaser teasers">
+            <div class="teaser-wrapper" tal:define="url teaser/url">
 
-            <!-- Teaser with URL -->
-            <div class="teaser" tal:condition="url">
-              <a href="" tal:attributes="href url">
+              <!-- Teaser with URL -->
+              <div class="teaser" tal:condition="url">
+                <a href="" tal:attributes="href url">
+                  <div class="teaser-image">
+                    <img tal:replace="structure teaser/image"/>
+                  </div>
+                  <div class="teaser-text">
+                    <div class="teaser-title">
+                      <h2 tal:content="teaser/title">Teaser Title</h2>
+                    </div>
+                    <div class="teaser-description">
+                      <p tal:content="teaser/description">Teaser Description</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Teaser without URL -->
+              <div class="teaser" tal:condition="not:url">
                 <div class="teaser-image">
-                  <img tal:replace="structure teaser/image" />
+                  <img tal:replace="structure teaser/image"/>
                 </div>
                 <div class="teaser-text">
                   <div class="teaser-title">
@@ -28,77 +45,62 @@
                     <p tal:content="teaser/description">Teaser Description</p>
                   </div>
                 </div>
+              </div>
+
+            </div>
+          </tal:teasers>
+        </section>
+
+        <section class="frontpage-text">
+          <h1 class="documentFirstHeading" tal:condition="python:context.title and context.show_title" tal:content="context/title">Title</h1>
+          <div class="documentDescription description" tal:condition="python:context.description and context.show_description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
+          <div id="parent-fieldname-text" tal:condition="python:context.text and context.show_text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
+        </section>
+
+        <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
+          <div class="col-xs-12 col-sm-4 js-height" tal:repeat="item news">
+            <div class="news-wrapper">
+              <a href="" tal:attributes="href item/url">
+                <div class="news-image">
+                  <img tal:replace="structure item/image"/>
+                </div>
               </a>
-            </div>
-
-            <!-- Teaser without URL -->
-            <div class="teaser" tal:condition="not:url">
-              <div class="teaser-image">
-                <img tal:replace="structure teaser/image" />
-              </div>
-              <div class="teaser-text">
-                <div class="teaser-title">
-                  <h2 tal:content="teaser/title">Teaser Title</h2>
+              <div class="news-text-wrapper">
+                <div class="news-title">
+                  <h3 tal:content="item/title">Teaser Title</h3>
                 </div>
-                <div class="teaser-description">
-                  <p tal:content="teaser/description">Teaser Description</p>
+                <div class="news-description">
+                  <p tal:content="item/description">Teaser Description</p>
                 </div>
               </div>
             </div>
-
           </div>
-        </tal:teasers>
-      </section>
+        </section>
 
-      <section class="frontpage-text">
-        <h1 class="documentFirstHeading" tal:condition="python:context.title and context.show_title" tal:content="context/title">Title</h1>
-        <div class="documentDescription description" tal:condition="python:context.description and context.show_description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
-        <div id="parent-fieldname-text" tal:condition="python:context.text and context.show_text" tal:content="structure python:context.text.output_relative_to(view.context)" />
-      </section>
+        <script tal:content="view/get_js_vars" type="text/javascript"></script>
+        <script type="text/javascript">
+          require([
+            'jquery', 'carouFredSel'
+          ], function ($) {
+            'use strict';
 
-      <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
-        <div class="col-xs-12 col-sm-4 js-height" tal:repeat="item news">
-          <div class="news-wrapper">
-            <a href="" tal:attributes="href item/url">
-              <div class="news-image">
-                <img tal:replace="structure item/image" />
-              </div>
-            </a>
-            <div class="news-text-wrapper">
-              <div class="news-title">
-                <h3 tal:content="item/title">Teaser Title</h3>
-              </div>
-              <div class="news-description">
-                <p tal:content="item/description">Teaser Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script tal:content="view/get_js_vars" type="text/javascript"></script>
-      <script type="text/javascript">
-        require([
-          'jquery',
-          'carouFredSel',
-        ], function($) {
-          'use strict';
-
-          $(window).on("load resize", function() {
-            $("#frontpage-carousel").carouFredSel({
-              responsive: true,
-              auto: 10000,
-              scroll: {fx: animation, duration: 500, pauseOnHover: true},
-              prev: {button: ".navigation .prev", key: "left"},
-              next: {button: ".navigation .next", key: "right"}
+            $(document).ready(function() {
+              $(window).on("load resize", function() {
+                $("#frontpage-carousel").carouFredSel({
+                  responsive: true,
+                  auto: 10000,
+                  scroll: {fx: animation, duration: 500, pauseOnHover: true},
+                  prev: {button: ".navigation .prev", key: "left"},
+                  next: {button: ".navigation .next", key: "right"}
+                });
+              });
             });
-          });
 
-        })
-      </script>
+          })
+        </script>
 
+      </metal:content-core>
     </metal:content-core>
-  </metal:content-core>
-</body>
+  </body>
 
 </html>
