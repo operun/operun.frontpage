@@ -49,6 +49,19 @@ class FrontpageView(BrowserView):
 
         return autoscroll + animation
 
+    def get_news_image(self):
+        """
+        Check whether a newsitem has an image and if not, use the default one provided.
+        """
+        if obj.image:
+            return  # Something
+        elif not obj.image:
+            # Fetch default image and return
+            return  # Default
+        else:
+            # Image = nothing
+            return  # Image
+
     def get_news(self):
         """
         Get news items from the catalog and return its objects.

@@ -7,6 +7,7 @@ from zope import schema
 from zope.interface import Interface
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
+from plone.namedfile.field import NamedBlobImage
 
 from operun.frontpage import _
 
@@ -20,6 +21,12 @@ EffectVocabulary = SimpleVocabulary(
      SimpleTerm(value=u'cover-fade', title=_(u'Coverfade')),
      SimpleTerm(value=u'uncover', title=_(u'Uncover')),
      SimpleTerm(value=u'uncover-fade', title=_(u'Uncoverfade'))]
+)
+
+NewsVocabulary = SimpleVocabulary(
+    [SimpleTerm(value=3, title=_(u'3')),
+     SimpleTerm(value=6, title=_(u'6')),
+     SimpleTerm(value=9, title=_(u'9'))]
 )
 
 
@@ -90,9 +97,16 @@ class IFrontpage(Interface):
         default=True,
     )
 
-    limit_news = schema.Int(
+    default_image = NamedBlobImage(
+        title=_(u'frontpage_default_image_title', default='Default news item image'),  # noqa
+        description=_(u'frontpage_default_image_description', default=u'Upload a default news item image. Recommended.'),  # noqa
+        required=False,
+    )
+
+    limit_news = schema.Choice(
         title=_(u"frontpage_limit_news_title", default="Number of News items"),
         description=_(u'frontpage_limit_news_description', default=u'Limit the number of displayed items.'),  # noqa
+        vocabulary=NewsVocabulary,
         required=False,
         default=6,
     )

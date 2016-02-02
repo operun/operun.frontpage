@@ -84,8 +84,8 @@
           ], function ($) {
             'use strict';
 
-            $(document).ready(function() {
-              $(window).on("load resize", function() {
+            $(document).ready(function () {
+              $(window).on("load resize", function () {
                 $("#frontpage-carousel").carouFredSel({
                   responsive: true,
                   auto: 10000,
