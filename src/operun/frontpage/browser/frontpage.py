@@ -56,6 +56,8 @@ class FrontpageView(BrowserView):
         images_view = api.content.get_view('images', context, self.request)  # noqa
         tag = images_view.tag(item, height=165, width=380, direction='down')  # noqa
 
+        return tag
+
     def get_news(self):
         """
         Get news items from the catalog and return its objects.
@@ -74,9 +76,9 @@ class FrontpageView(BrowserView):
             url = obj.absolute_url()
 
             if obj.image:
-                self.get_tag(obj, 'image')
+                tag = self.get_tag(obj, 'image')
             elif self.context.default_image:
-                self.get_tag(self.context, 'default_image')
+                tag = self.get_tag(self.context, 'default_image')
             else:
                 tag = None
 
