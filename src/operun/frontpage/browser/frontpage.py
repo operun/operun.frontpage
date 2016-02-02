@@ -49,22 +49,6 @@ class FrontpageView(BrowserView):
 
         return autoscroll + animation
 
-    def get_news_image(self):
-        """
-        Check whether a newsitem has an image and if not, return default.
-        """
-
-        """
-        if obj.image:
-            return  # Something
-        elif not obj.image:
-            # Fetch default image and return
-            return  # Default
-        else:
-            # Image = nothing
-            return  # Image
-        """
-
     def get_news(self):
         """
         Get news items from the catalog and return its objects.
@@ -85,7 +69,11 @@ class FrontpageView(BrowserView):
                 images_view = api.content.get_view('images', obj, self.request)  # noqa
                 tag = images_view.tag('image', height=165, width=380, direction='down')  # noqa
             else:
-                tag = None
+                if self.context.default_image:
+                    images_view = api.content.get_view('images', self.context, self.request)  # noqa
+                    tag = images_view.tag('default_image', height=165, width=380, direction='down')  # noqa
+                else:
+                    tag = None
 
             data = {'title': self.crop(title, 65),
                     'description': self.crop(description, 265),
