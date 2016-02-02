@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 from plone.app.textfield import RichText
 from plone.dexterity.content import Container
 from plone.supermodel.directives import fieldset

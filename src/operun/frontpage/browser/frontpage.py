@@ -77,10 +77,11 @@ class FrontpageView(BrowserView):
 
             if obj.image:
                 tag = self.get_tag(obj, 'image')
-            elif self.context.default_image:
-                tag = self.get_tag(self.context, 'default_image')
             else:
-                tag = None
+                if self.context.default_image:
+                    tag = self.get_tag(self.context, 'default_image')
+                else:
+                    tag = None
 
             data = {'title': self.crop(title, 65),
                     'description': self.crop(description, 265),
