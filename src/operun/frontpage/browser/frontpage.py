@@ -49,21 +49,14 @@ class FrontpageView(BrowserView):
 
         return autoscroll + animation
 
-    def get_news_image(self):
+    def get_tag(self, context, item):
         """
-        Check whether a newsitem has an image and if not, return default.
+        Return image tag.
         """
+        images_view = api.content.get_view('images', context, self.request)  # noqa
+        tag = images_view.tag(item, height=165, width=380, direction='down')  # noqa
 
-        """
-        if obj.image:
-            return  # Something
-        elif not obj.image:
-            # Fetch default image and return
-            return  # Default
-        else:
-            # Image = nothing
-            return  # Image
-        """
+        return tag
 
     def get_news(self):
         """
@@ -75,6 +68,7 @@ class FrontpageView(BrowserView):
                                   sort_order='reverse')
 
         items = []
+
         for item in brains:
             obj = item.getObject()
             title = obj.title
@@ -82,10 +76,12 @@ class FrontpageView(BrowserView):
             url = obj.absolute_url()
 
             if obj.image:
-                images_view = api.content.get_view('images', obj, self.request)  # noqa
-                tag = images_view.tag('image', height=165, width=380, direction='down')  # noqa
+                tag = self.get_tag(obj, 'image')
             else:
-                tag = None
+                if self.context.default_image:
+                    tag = self.get_tag(self.context, 'default_image')
+                else:
+                    tag = None
 
             data = {'title': self.crop(title, 65),
                     'description': self.crop(description, 265),
