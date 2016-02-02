@@ -51,7 +51,9 @@ class FrontpageView(BrowserView):
 
     def get_news_image(self):
         """
-        Check whether a newsitem has an image and if not, use the default one provided.
+        Check whether a newsitem has an image and if not, return default.
+        """
+
         """
         if obj.image:
             return  # Something
@@ -61,6 +63,7 @@ class FrontpageView(BrowserView):
         else:
             # Image = nothing
             return  # Image
+        """
 
     def get_news(self):
         """

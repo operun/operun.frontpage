@@ -71,4 +71,8 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 .js-height {
   height: auto;
 }
+/* Overrides */
+.template-view .formHelp {
+  display: none;
+}
 /*# sourceMappingURL=frontpage-compiled.css.map */
