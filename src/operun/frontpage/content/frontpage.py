@@ -87,7 +87,7 @@ class IFrontpage(Interface):
 
     fieldset('news',
              label=_(u'frontpage_fieldset_news_label', default=u'News'),
-             fields=('show_news', 'limit_news'),
+             fields=('show_news', 'limit_news', 'default_image'),
              )
 
     show_news = schema.Bool(

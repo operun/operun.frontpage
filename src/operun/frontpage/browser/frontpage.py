@@ -49,6 +49,13 @@ class FrontpageView(BrowserView):
 
         return autoscroll + animation
 
+    def get_tag(self, context, item):
+        """
+        Return image tag.
+        """
+        images_view = api.content.get_view('images', context, self.request)  # noqa
+        tag = images_view.tag(item, height=165, width=380, direction='down')  # noqa
+
     def get_news(self):
         """
         Get news items from the catalog and return its objects.
@@ -59,6 +66,7 @@ class FrontpageView(BrowserView):
                                   sort_order='reverse')
 
         items = []
+
         for item in brains:
             obj = item.getObject()
             title = obj.title
@@ -66,14 +74,11 @@ class FrontpageView(BrowserView):
             url = obj.absolute_url()
 
             if obj.image:
-                images_view = api.content.get_view('images', obj, self.request)  # noqa
-                tag = images_view.tag('image', height=165, width=380, direction='down')  # noqa
+                self.get_tag(obj, 'image')
+            elif self.context.default_image:
+                self.get_tag(self.context, 'default_image')
             else:
-                if self.context.default_image:
-                    images_view = api.content.get_view('images', self.context, self.request)  # noqa
-                    tag = images_view.tag('default_image', height=165, width=380, direction='down')  # noqa
-                else:
-                    tag = None
+                tag = None
 
             data = {'title': self.crop(title, 65),
                     'description': self.crop(description, 265),
