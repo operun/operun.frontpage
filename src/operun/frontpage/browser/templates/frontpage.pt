@@ -20,19 +20,9 @@
             $("#frontpage-carousel").carouFredSel({
               responsive: true,
               auto: 10000,
-              scroll: {
-                fx: animation,
-                duration: 500,
-                pauseOnHover: true
-              },
-              prev: {
-                button: ".navigation .prev",
-                key: "left"
-              },
-              next: {
-                button: ".navigation .next",
-                key: "right"
-              }
+              scroll: {fx: animation, duration: 500, pauseOnHover: true},
+              prev: {button: ".navigation .prev", key: "left"},
+              next: {button: ".navigation .next", key: "right"}
             });
           });
 
