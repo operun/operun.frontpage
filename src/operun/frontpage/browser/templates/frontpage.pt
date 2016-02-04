@@ -76,8 +76,8 @@
       </section>
 
       <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
-        <div class="col-xs-12 col-sm-4 js-height" tal:repeat="item news">
-          <div class="news-wrapper">
+        <div class="col-xs-12 col-sm-4" tal:repeat="item news">
+          <div class="news-wrapper row">
             <a href="" tal:attributes="href item/url">
               <div class="news-image">
                 <img tal:replace="structure item/image" />
