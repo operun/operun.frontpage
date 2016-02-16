@@ -14,27 +14,19 @@
       <script tal:content="view/get_js_vars" type="text/javascript"></script>
       <script type="text/javascript">
         require([
-          'jquery', 'carouFredSel'
+          'jquery', 'carouFredSel', 'bootstrap-colequalizer',
         ], function($) {
           'use strict';
+
+          $('.col-eq').colequalizer();
 
           $(window).on("load resize", function() {
             $("#frontpage-carousel").carouFredSel({
               responsive: true,
               auto: 10000,
-              scroll: {
-                fx: animation,
-                duration: 500,
-                pauseOnHover: true
-              },
-              prev: {
-                button: ".navigation .prev",
-                key: "left"
-              },
-              next: {
-                button: ".navigation .next",
-                key: "right"
-              }
+              scroll: {fx: animation, duration: 500, pauseOnHover: true},
+              prev: {button: ".navigation .prev", key: "left"},
+              next: {button: ".navigation .next", key: "right"}
             });
           });
 
@@ -88,8 +80,8 @@
       </section>
 
       <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
-        <div class="col-xs-12 col-sm-4" tal:repeat="item news">
-          <div class="row">
+        <div class="row col-eq">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" tal:repeat="item news">
             <div class="news-wrapper">
               <a href="" tal:attributes="href item/url">
                 <div class="news-image">
