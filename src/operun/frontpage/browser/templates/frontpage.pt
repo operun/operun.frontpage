@@ -33,7 +33,10 @@
         })
       </script>
 
-      <section id="frontpage-carousel" tal:condition="teasers" tal:define="teasers view/teasers">
+      <section tal:condition="teasers" tal:define="teasers view/teasers">
+
+        <div id="frontpage-carousel">
+
         <tal:teasers tal:repeat="teaser teasers">
           <div class="teaser-wrapper" tal:define="url teaser/url">
 
@@ -71,6 +74,12 @@
 
           </div>
         </tal:teasers>
+        </div>
+
+        <div id="add-teaser-link" tal:define="link view/add_teaser_link" tal:condition="link">
+          <a href="" tal:attributes="href link"><i class="schilbach-plus-circled"></i></a>
+        </div>
+
       </section>
 
       <section class="frontpage-text">

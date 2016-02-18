@@ -16,6 +16,15 @@ class FrontpageView(BrowserView):
 
         return self.template()
 
+    def add_teaser_link(self):
+        """
+        Return link to add new Teaser
+        """
+        if api.user.is_anonymous():
+            return None
+        else:
+            return self.context.absolute_url() + '/++add++Teaser'
+
     def crop(self, text, count):
         """
         Crop given text to given count.
