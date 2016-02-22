@@ -14,7 +14,7 @@
       <script tal:content="view/get_js_vars" type="text/javascript"></script>
       <script type="text/javascript">
         require([
-          'jquery', 'carouFredSel', 'bootstrap-colequalizer',
+          'jquery', 'caroufredsel', 'bootstrap-colequalizer',
         ], function($) {
           'use strict';
 
