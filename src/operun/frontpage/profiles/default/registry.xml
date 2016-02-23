@@ -5,8 +5,8 @@
     <value key="deps">jquery</value>
   </records>
 
-  <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/carouFredSel">
-    <value key="js">++resource++operun.frontpage/carouFredSel.js</value>
+  <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/caroufredsel">
+    <value key="js">++resource++operun.frontpage/caroufredsel-6.1.0.js</value>
     <value key="deps">jquery</value>
   </records>
 
