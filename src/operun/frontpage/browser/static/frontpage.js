@@ -6,7 +6,7 @@ if (window.jQuery) {
 
 require([
   'jquery',
-  'caroufredsel',
+  'carouFredSel',
   'bootstrap-colequalizer',
 ], function($) {
   'use strict';

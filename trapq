@@ -1,0 +1,781 @@
+[33mcommit 3036ba8bf38bf63f875d0ea0dc2634e5f1b31fb6[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Mar 1 14:53:56 2016 +0100
+
+    removed overflow: hidden on .row class
+
+[33mcommit 402fc99327881595c6d8285a7dd870f57e32a0d4[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 23 15:47:14 2016 +0100
+
+    added to buildout and re-compiled
+
+[33mcommit 3a618106027a24d9609a716e2e214eecafa102f2[m
+Merge: 4e4a1d2 7a90bae
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 23 15:44:00 2016 +0100
+
+    Merge pull request #7 from operun/bug/carousel
+    
+    Downgraded carouFredSel.
+
+[33mcommit 7a90bae3ec26f233fc4b126d74c04ee92cf97990[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Mon Feb 22 16:01:36 2016 +0100
+
+    downgraded caroufredsel for testing
+
+[33mcommit 4e4a1d2fffdc5136cf9fdcef41eacb017dd9c6d1[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Fri Feb 19 00:41:08 2016 +0100
+
+    add link to add teaser
+
+[33mcommit e47e1bef262e93f47bb5799b1d43c192149a64c1[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Thu Feb 18 14:57:08 2016 +0100
+
+    updated gitignore
+
+[33mcommit 11fb86c66d77baeeacb302e0c7ea67fdfc73ab65[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Thu Feb 18 14:54:34 2016 +0100
+
+    updated translations
+
+[33mcommit 0e9bdd8af1e6dc76c743517e4e1acaee6488efb4[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Feb 17 14:07:19 2016 +0100
+
+    reduced JPEG image size to 16px
+
+[33mcommit 05ee16edc7a0a97ff5ee852daafbc88d37e21f24[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Feb 17 12:45:09 2016 +0100
+
+    changed from none to auto
+
+[33mcommit 33fb480ef4b1a13233bd04d915b42b58b1b8711f[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Feb 17 12:41:19 2016 +0100
+
+    re-compiled
+
+[33mcommit 9cdd0749984f87313d18425fcb4d5036ca6d7a84[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Feb 17 12:40:21 2016 +0100
+
+    fixed 100% width icon
+
+[33mcommit 9b179de9b4b4fdd515e0233d1c4441386a3734bb[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 16 20:37:51 2016 +0100
+
+    re-compiled to master
+
+[33mcommit 81a2e4329caf122d177519767a0d0c4d9423c960[m
+Merge: 7ecad94 370e7b2
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 16 20:36:13 2016 +0100
+
+    Merge branch 'master' of github.com:operun/operun.frontpage
+
+[33mcommit 7ecad94446abe03e7a1265c2221efba8cfee061f[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 16 20:35:52 2016 +0100
+
+    re-compiled to master
+
+[33mcommit 370e7b2453a9479b7a7ed5582f621011d58c94b4[m
+Merge: e742b62 43e69b5
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 16 20:32:36 2016 +0100
+
+    Merge pull request #6 from operun/feature/jscol-equalizer
+    
+    Feature/jscol equalizer
+
+[33mcommit 43e69b5807a232678563bd6a61e8bd0cd01d3513[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 16 20:31:51 2016 +0100
+
+    removed compile files
+
+[33mcommit e742b62448c0911082df00bd3870cf0866e09387[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 16 20:29:07 2016 +0100
+
+    removed compile files
+
+[33mcommit 97e4705019e6510341ec0e441bc0c5c5f20b1b8d[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 16 13:21:50 2016 +0100
+
+    downgraded ipdb version to prevent conflicts
+
+[33mcommit f706a9844dd5ed27a20976a086328f147bf6355f[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 16 13:16:57 2016 +0100
+
+    downgraded and re-compiled package
+
+[33mcommit 7c9c66cfb63a39ce240dd47847a24629e371a408[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Mon Feb 15 20:41:55 2016 +0100
+
+    downgraded ipdb, added js dependency for column heights
+
+[33mcommit 1df64338ab8fb8eef79d47bcc4ec84d6c9c73c3a[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Mon Feb 15 14:55:51 2016 +0100
+
+    fixed row assignment
+
+[33mcommit 9d994d0498836dbd0b9c98d6790caf38a5bb9616[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Feb 4 14:17:29 2016 +0100
+
+    re-compiled
+
+[33mcommit 5b0287d9af4306403b601b67b780999b1eb28004[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Feb 4 13:40:11 2016 +0100
+
+    fixed per row height and footer text clipping
+
+[33mcommit c55347419966f97f51af55c3ce70447d65d41840[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Feb 4 13:06:20 2016 +0100
+
+    re-compiled
+
+[33mcommit 2007df58c77ce781be189d7c7939ba8053df638a[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Feb 3 15:51:56 2016 +0100
+
+    changed order of script
+
+[33mcommit 2cac6bedca91d00ae6cccc37ddeb51fc2fa0d529[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 2 16:11:35 2016 +0100
+
+    added width and height adjustments to teaser image preview
+
+[33mcommit 72ee3b4f3a7cf84521430da2601059f2a1ed972e[m
+Merge: d1d9fe3 6cc7589
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 2 15:51:21 2016 +0100
+
+    Merge pull request #4 from operun/feature/default_news_image
+    
+    Feature/default news image
+
+[33mcommit 6cc7589a0fb664a1584262b6895be60cdb626050[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 2 15:50:55 2016 +0100
+
+    fixed if statement
+
+[33mcommit b78fe92432b7e4c6b0839103ce35c4c9a82adf6c[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Feb 2 15:47:54 2016 +0100
+
+    fixed get image method
+
+[33mcommit d52daea3f6d3891b34a6ff1365d91bdcb25a377c[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 2 15:33:59 2016 +0100
+
+    moved tag to definition
+
+[33mcommit 121c29ad73c57a36c481bc0e6dc1855bea31012d[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Feb 2 14:31:26 2016 +0100
+
+    check for default image
+
+[33mcommit d1d9fe30260d16db15c7016a45be92e55c0dd89f[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 2 13:08:50 2016 +0100
+
+    re-compiled and cleaned Flake8 errors
+
+[33mcommit 6908ce04542aaf0a50a84b56e88723ffae6356b9[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Feb 2 13:03:48 2016 +0100
+
+    added text overide, added contenttype field for default image, changed newsitem quantity to schema.choice and based a sketch definition for the get_news_image function
+
+[33mcommit a90c760fb70cd8462a7ec02a0115b1e973a70871[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Mon Feb 1 16:27:57 2016 +0100
+
+    doc and win functions added
+
+[33mcommit 0e3ff7cfb9318a176bfdd79ee72a9eac6c28c105[m
+Merge: 0972fa5 418a184
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Mon Feb 1 15:55:37 2016 +0100
+
+    Merge pull request #3 from operun/bug/js_breaks
+    
+    added doc and win functions to js
+
+[33mcommit 418a184fdac3c62b3c1e78142d672ebc228a1ff1[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Mon Feb 1 15:50:59 2016 +0100
+
+    added doc and win functions to js
+
+[33mcommit 0972fa53c3421c20418d0320d41767184eedca9d[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Mon Feb 1 15:36:20 2016 +0100
+
+    changed news item columns for mobile
+
+[33mcommit 5830a86e558cb308aaf468af594be171c94960c8[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Thu Jan 28 13:40:58 2016 +0100
+
+    fixed code to set height on news items
+
+[33mcommit fc4e00f2d2194622eb48c43157ef7d5077328491[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Jan 27 17:16:05 2016 +0100
+
+    fixed height of news item without image
+
+[33mcommit 29e774c5f7ce655e1dc0cfa73f18188a14d3c344[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Jan 26 17:24:28 2016 +0100
+
+    push new compile
+
+[33mcommit 7180d3b20e47a859260b37bcb89a1132bb3c2500[m
+Merge: 41b598c f1ae8fc
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 21 19:46:00 2016 +0100
+
+    Merge pull request #2 from operun/feature/fix_newsitem
+    
+    Feature/fix newsitem
+
+[33mcommit f1ae8fccabd16193f8a8f40f8f532e87ee67b939[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 21 17:28:52 2016 +0100
+
+    testing window load for resizing
+
+[33mcommit 7df2db6956998ce406fb234497a9708aa68b6904[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 21 17:03:34 2016 +0100
+
+    height from tallest child via js
+
+[33mcommit 41b598c9e745366c2ec6846f7595a635796c4aa6[m
+Merge: 6ea1c24 d78bfe0
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Wed Jan 20 17:42:47 2016 +0100
+
+    Merge pull request #1 from operun/responsive_testing
+    
+    Responsive testing
+
+[33mcommit d78bfe045f44dec7eaa169505feeb74a0ed77bed[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Jan 20 17:37:48 2016 +0100
+
+    formatting
+
+[33mcommit 4d347c3aa1f2109699f84d8dc81925f553ecc106[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Wed Jan 20 17:34:55 2016 +0100
+
+    fixed frontpage teaser background bar, updated bundle
+
+[33mcommit 83ae4f2bc6e2c04b2a8978977675e45d3b7367ce[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Jan 20 17:28:43 2016 +0100
+
+    fixed opacity
+
+[33mcommit a03566027324783d18351c4d7267fb61ce3838fc[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Jan 20 17:21:05 2016 +0100
+
+    re-compiled
+
+[33mcommit f329f7fe98dbc43c2bdcdbac7eca85374164fb97[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Jan 20 17:11:48 2016 +0100
+
+    teaser bg fixed
+
+[33mcommit abc3148efba274956b69d4049df85ee0b47068b0[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 18:01:44 2016 +0100
+
+    non standard image sizes correctly re-sized to fit news block
+
+[33mcommit 2231d777f4d9f6e20c5fa0da5dcdb1e60528dac8[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 17:38:33 2016 +0100
+
+    fixed teaser text alignment
+
+[33mcommit a2e13e799508faacf45982ba73ccc3c03723894b[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 17:38:11 2016 +0100
+
+    fixed teaser text alignment
+
+[33mcommit a096726e9dabc864213dd72b90ecee5fe495188a[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 17:34:24 2016 +0100
+
+    fixed teaser text alignment
+
+[33mcommit cdafdf11fc15d597da5701eee0034f5c5a5731a0[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 17:11:48 2016 +0100
+
+    fixed teaser text alignment
+
+[33mcommit 9f1bbcb45efd804de2b13e877de52ea3a407310e[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 17:09:20 2016 +0100
+
+    fixed teaser text alignment
+
+[33mcommit addf90d419f49bc005b4d2a166ada63d35a58658[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 17:07:25 2016 +0100
+
+    fixed teaser text alignment
+
+[33mcommit ccf1d1f9159a5f57d252502fe7e7169a458c5a7f[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 16:48:52 2016 +0100
+
+    tweaked news text positioning
+
+[33mcommit caa1b9962057807777d15d132725c63cad072e37[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 16:34:37 2016 +0100
+
+    tweaks
+
+[33mcommit 8ce056a574912536632b8f930c813ad644b38f42[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Jan 14 16:30:08 2016 +0100
+
+    column scaling
+
+[33mcommit 6ea1c24410a71e63af03c51a7ccedc09a80c6b7c[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Wed Jan 13 17:07:12 2016 +0100
+
+    updated translations
+
+[33mcommit 64951d5c2913f12374804b20a52cc6b2185c03d6[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Jan 13 15:11:28 2016 +0100
+
+    added text background for readability - basic
+
+[33mcommit cd8a3f0f940dcc8156711fef5f202289a77f4d08[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Jan 13 14:18:52 2016 +0100
+
+    re-compiled
+
+[33mcommit 92956a3d2519dec8bb10f00c34814ae8373b2c3f[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Jan 13 14:15:42 2016 +0100
+
+    type correction
+
+[33mcommit 8e0f69d72852d99eddffd4f845104e0f7a6bec19[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 22 17:07:48 2015 +0100
+
+    added fix for empty images
+
+[33mcommit 6d61b00d60efbf198d76f9595f2820b8ca4f9000[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 22 16:44:35 2015 +0100
+
+    fixed flake8
+
+[33mcommit 54ef561e0367245679a5a0b1652ce25176e9a42f[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 22 16:43:45 2015 +0100
+
+    added configuration options, move settings to tabs, updated translations
+
+[33mcommit 413800fc5c0dc45eaa7be34a77b6e41df6e5e4ec[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 22 15:37:55 2015 +0100
+
+    fixed teaser decription on mobile, updated bundle
+
+[33mcommit 07fd56d461506704c557a87f1ec244430899e205[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 22 15:30:46 2015 +0100
+
+    sort news by date, added news item limit, updated translations
+
+[33mcommit 3e75afeb691a371b8333db051f0dc53ae1b58cea[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 22 15:11:29 2015 +0100
+
+    fixed flake8
+
+[33mcommit 6a67ae1bca6965fe1fb541fd3f21f3475c35cf22[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 22 15:10:17 2015 +0100
+
+    added croppng to frontpage, fixed css
+
+[33mcommit fe21e152b635ebf77c1b31a46f55b26f8eff505f[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 22 14:47:55 2015 +0100
+
+    fixed responsive css
+
+[33mcommit b2be8d33bf14b4a1f6aabb7a0f8cd4fc619efeab[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Mon Dec 21 18:26:07 2015 +0100
+
+    updated bundle
+
+[33mcommit 0280f256353166f7d3ca4838d92b895a06314e37[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Mon Dec 21 18:25:58 2015 +0100
+
+    updated frontpage styling, fixed responsiveness
+
+[33mcommit b4f9410402d290ce71f3c7b1e9718187e29a429c[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Mon Dec 21 18:24:42 2015 +0100
+
+    changed version to 1.0.0 for initial release
+
+[33mcommit 6b393c757c70b0f7efc138a9d43818db62ef238a[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Dec 17 15:41:03 2015 +0100
+
+    released 1.0.1 frontpage
+
+[33mcommit 0cb9d82a8a8de62ce2219c76de4b870a84194d79[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Dec 17 15:13:49 2015 +0100
+
+    frontpage fully responsive on breakpoints
+
+[33mcommit 1490ffc80103cb6021695a2fcae7d759f3760f44[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Dec 17 15:11:42 2015 +0100
+
+    frontpage fully responsive on breakpoints
+
+[33mcommit 68ff462381b3d95c10355b747c15b32fa67900d5[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 17:47:57 2015 +0100
+
+    adding responsive queries to news items
+
+[33mcommit 5d97feba695c46ff609d765ed4f648c1b9a1c649[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 17:41:45 2015 +0100
+
+    adding responsive queries to news items
+
+[33mcommit 4e9debb323fb5d2d2c4d366c2705e57ac8c2fd40[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 17:34:05 2015 +0100
+
+    adding responsive queries to news items
+
+[33mcommit d3dc013e0ee2d8076b0d51aab4d8e3ead68a7aef[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 17:04:39 2015 +0100
+
+    removed touch response - breaks scaling
+
+[33mcommit b0783c5cbd8f187c7e26423e169e8d0904e562b1[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 16:47:23 2015 +0100
+
+    fixed slider responsiveness
+
+[33mcommit 0f4c8e27d0428998b2bab224e8b82f2370d87008[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 16:42:55 2015 +0100
+
+    fixed slider responsiveness
+
+[33mcommit 1f0206ce141e07f101387f0e9061a6f58b476b86[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 16:40:20 2015 +0100
+
+    fixed slider responsiveness
+
+[33mcommit d6b4fecea75a329609361cf875f34d5ffe9e9188[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 16:23:53 2015 +0100
+
+    fixed slider responsiveness
+
+[33mcommit 653a57da68a2d4407fc54de13391d92780d5c281[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 16:18:25 2015 +0100
+
+    fixed slider responsiveness
+
+[33mcommit bc8b7c457e86050ea64a0e81e0e9f0c2a1b6f529[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 11:53:12 2015 +0100
+
+    corrected view reference get_news
+
+[33mcommit a15e2a1ae7d9a2f20e4d5457b22604ed6442ef4f[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 16 11:49:41 2015 +0100
+
+    polishing & deprecated unused modules
+
+[33mcommit cd151f593a1215d85e113c936489901621b019cf[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 15 20:29:50 2015 +0100
+
+    added links to frontpage teaser and news items
+
+[33mcommit f5193901883bcd09b1cd674282963bb4db93faad[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 15 20:18:20 2015 +0100
+
+    change version number to 1.0.0, fixed frontpage, updated bundle
+
+[33mcommit 0eac26594b865c3a14b32a89d4031c21f5300b15[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 15 20:01:13 2015 +0100
+
+    added frontpage to default page types
+
+[33mcommit 0f707e9b9cf68f7631196da403454dcd1f0f16d3[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 15 19:46:57 2015 +0100
+
+    added news item row to frontpage
+
+[33mcommit e6574f5263609477f6c0b963a7759cd9d5fc500c[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 15 17:36:16 2015 +0100
+
+    added icons for content types, updated bundle
+
+[33mcommit 028592e160ea32de12dcb65e877a971466d906a7[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 15 17:24:24 2015 +0100
+
+    added translations
+
+[33mcommit fe8d2be52ff96fc9f1c2697b1e242ff01febe865[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 15 17:05:40 2015 +0100
+
+    fix frontpage padding, add conditions based on checkboxes
+
+[33mcommit 53d28bd39bff94b7598310f39978f5bd4efa0bf0[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Tue Dec 15 15:28:37 2015 +0100
+
+    add frontpage to displayed types
+
+[33mcommit 3911ca39bb58ddbf3890d6dfe5ec17752f9113c3[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 15:16:26 2015 +0100
+
+    fixed hard cache reset breaking slider
+
+[33mcommit ff7ab6fabc8f8a16f42b6282a36ebfd02039f350[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 14:34:57 2015 +0100
+
+    fixes
+
+[33mcommit 3c259b3ac5545b234cdfd69eb70defee2dbda34a[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 14:21:52 2015 +0100
+
+    sliding anim fix
+
+[33mcommit e8bd6b7d8c30c5124332f16a05df968ee1247652[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 14:18:14 2015 +0100
+
+    sliding anim fix
+
+[33mcommit af74b65bae4b9c237846a6a9e3ae470bbb148071[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 14:13:42 2015 +0100
+
+    sliding anim fix
+
+[33mcommit c1cb5f175897256b62d2c12c48d2c1d466e27e77[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 13:45:33 2015 +0100
+
+    sliding anim fix
+
+[33mcommit 4551a385aeb814e2c59f912a0ce4303d983928e2[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 13:41:22 2015 +0100
+
+    sliding anim fix
+
+[33mcommit 6925bf17b23a15814810025e667a44301009a222[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 13:16:58 2015 +0100
+
+    sliding anim fix
+
+[33mcommit bffd1e5c9e30391fcdf95ba1dc363c5d34864a7d[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 11:54:13 2015 +0100
+
+    fixed Flake8 warnings on commit
+
+[33mcommit 1b6ced49b6b4b57ea92cdd3cce0dc97567f01875[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 11:50:30 2015 +0100
+
+    fixed Flake8 warnings on commit
+
+[33mcommit d04d6ef52a52a1250fb6603a65703d682195116d[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 11:47:43 2015 +0100
+
+    fixed Flake8 warnings on commit
+
+[33mcommit 865398bcf954b81d1cb6ab79265be50f7ab1cc12[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 11:40:12 2015 +0100
+
+    formatting and corrections
+
+[33mcommit 334bc12db7c865416ad68d9638bf612b0b3c1279[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 15 11:37:21 2015 +0100
+
+    formatting and corrections
+
+[33mcommit ed05a7632d31b1dd85ece2bc2064421c62d818ea[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Mon Dec 14 18:05:57 2015 +0100
+
+    added carousel, updated bundle
+
+[33mcommit ae8cbd44a95826d337fa8b2c669967bbdf29fd3e[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Wed Dec 9 17:58:36 2015 +0100
+
+    updated bundle to show animation
+
+[33mcommit 7acf6605b12eeccc7b513e8a9e18adfabd91d6b3[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 9 14:10:56 2015 +0100
+
+    testing
+
+[33mcommit c1a3f47063dba25bef1c169d9584a2389f55a779[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 9 14:05:01 2015 +0100
+
+    master push
+
+[33mcommit e33ce8f234997c7b4b1a379557d2f5506e96abc0[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Dec 3 13:55:23 2015 +0100
+
+    removed description field
+
+[33mcommit 05eb0facea6da046a87308c181447e23154bfc81[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Thu Dec 3 13:47:49 2015 +0100
+
+    compile resources added
+
+[33mcommit fea8e935ba13ae6c2be7d6cc20dea4a5cf91e715[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 2 17:54:39 2015 +0100
+
+    added carouFredSel
+
+[33mcommit 00f9784e29ebdd287a016e83ae609a20b474fa80[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 2 17:34:01 2015 +0100
+
+    added resource registry
+
+[33mcommit d76e2c5b373b08f7d4a9f76294b8b156e4c7feba[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 2 16:24:48 2015 +0100
+
+    grab teasers system updated
+
+[33mcommit b93a04aa2e3bb30242f312158d2d13a8ee0e39ee[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Wed Dec 2 15:42:38 2015 +0100
+
+    page template and teaser content added
+
+[33mcommit 819c97190572da229b3f04871bb0fffa4ba9bc15[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 1 15:00:33 2015 +0100
+
+    updated README
+
+[33mcommit ef49ec33dda0763043679802ceb58ba34be50754[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 1 14:59:01 2015 +0100
+
+    updated README
+
+[33mcommit b9978fed835cb4600a12a27de4c1a3f6e75159c6[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 1 14:53:27 2015 +0100
+
+    added Frontpage & Teaser
+
+[33mcommit 180e5a4cceed3e86269a30111b77906e69f259fa[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 1 14:39:28 2015 +0100
+
+    files
+
+[33mcommit 302517d93c4abc715d164fb93f745c4dd947f4c5[m
+Merge: 50e966a 9c94bcb
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 1 14:36:33 2015 +0100
+
+    commit
+
+[33mcommit 50e966ad2a34e506bb03c4fe8f80d7b5b0a51cf5[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 1 14:33:21 2015 +0100
+
+    first commit
+
+[33mcommit 3e9a95d728b54c5ada1a67105990f05646dbd36d[m
+Author: Jesse Stippel <SkyeStippel@Gmail.com>
+Date:   Tue Dec 1 14:32:07 2015 +0100
+
+    first commit
+
+[33mcommit 9c94bcb8ddaff54da1d5fe5f02a7403fafb761c4[m
+Author: Stefan Antonelli <stefan.antonelli@operun.de>
+Date:   Mon Nov 30 14:13:20 2015 +0100
+
+    Initial commit
