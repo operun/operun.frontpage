@@ -32,8 +32,10 @@
         $("#carousel").carouFredSel({
           responsive: true,
           auto: 10000,
+          //width: 1200,
+          //height: 514,
           scroll: {
-            fx: animation,
+            fx: "scroll",
             duration: 500,
             pauseOnHover: true
           },
@@ -51,14 +53,7 @@
 
     <!-- Custom CSS -->
     <style>
-      body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-      }
-
-      #caroufredsel_wrapper {
-        margin: 20px 0;
-      }
+      body { padding-top: 70px; }
 
       #carousel {
         width: 1200px;
@@ -66,11 +61,11 @@
         overflow: hidden;
       }
 
-    </style>
+      #carousel .teaser {
+          display: inline-block;
+      }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+    </style>
 
   </head>
 
@@ -117,15 +112,19 @@
           <p class="lead">Complete with pre-defined file paths that you won't have to change!</p>
 
           <div id="carousel">
+
             <div class="teaser">
               <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-9.jpg" alt="Image #1">
             </div>
+
             <div class="teaser">
               <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-8.jpg" alt="Image #2">
             </div>
+
             <div class="teaser">
               <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-2.jpg" alt="Image #3">
             </div>
+
           </div>
 
           <ul class="list-unstyled">
