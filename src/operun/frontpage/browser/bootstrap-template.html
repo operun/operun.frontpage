@@ -30,12 +30,9 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $("#carousel").carouFredSel({
-          responsive: true,
-          auto: 10000,
-          //width: 1200,
-          //height: 514,
+          responsive: true, auto: 10000,
           scroll: {
-            fx: "scroll",
+            fx: "directscroll",
             duration: 500,
             pauseOnHover: true
           },
@@ -53,16 +50,8 @@
 
     <!-- Custom CSS -->
     <style>
-      body { padding-top: 70px; }
-
-      #carousel {
-        width: 1200px;
-        height: 514px;
-        overflow: hidden;
-      }
-
-      #carousel .teaser {
-          display: inline-block;
+      body {
+        padding-top: 70px;
       }
 
     </style>
@@ -113,15 +102,15 @@
 
           <div id="carousel">
 
-            <div class="teaser">
+            <div class="teaser" style="display: inline-block; width: 1200px; height: 514px;">
               <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-9.jpg" alt="Image #1">
             </div>
 
-            <div class="teaser">
+            <div class="teaser" style="display: inline-block; width: 1200px; height: 514px;">
               <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-8.jpg" alt="Image #2">
             </div>
 
-            <div class="teaser">
+            <div class="teaser" style="display: inline-block; width: 1200px; height: 514px;">
               <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-2.jpg" alt="Image #3">
             </div>
 
