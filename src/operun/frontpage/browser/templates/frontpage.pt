@@ -15,7 +15,7 @@
         <script type="text/javascript">
 
           require([
-            'jquery', 'bootstrap-colequalizer', 'carouFredSel'
+            'jquery', 'colequalizer', 'caroufredsel'
           ], function ($) {
             'use strict';
 

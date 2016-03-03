@@ -1,12 +1,12 @@
 <registry>
 
-  <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/bootstrap-colequalizer">
-    <value key="js">++resource++operun.frontpage/bootstrap-colequalizer-1.0.2.js</value>
+  <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/colequalizer">
+    <value key="js">++resource++operun.frontpage/colequalizer-1.0.2.js</value>
     <value key="deps">jquery</value>
   </records>
 
-  <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/carouFredSel">
-    <value key="js">++resource++operun.frontpage/carouFredSel-6.2.1.js</value>
+  <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/caroufredsel">
+    <value key="js">++resource++operun.frontpage/caroufredsel-6.2.1.js</value>
     <value key="deps">jquery</value>
   </records>
 
