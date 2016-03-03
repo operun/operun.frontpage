@@ -28,32 +28,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.caroufredsel/6.2.1/jquery.carouFredSel.packed.js" type="text/javascript"></script>
 
     <script type="text/javascript">
+
       $(document).ready(function () {
-        $("#carousel").carouFredSel({
+        var $carousel = $("#carousel");
+
+        $carousel.carouFredSel({
           responsive: true,
-          auto: 10000,
-          width: 1140,
-          height: 488,
-          items: {
-            visible: 1,
-            width: 1140,
-            height: 488,
-          },
-          scroll: {
-            fx: "directscroll",
-            duration: 500,
-            pauseOnHover: true
-          },
-          prev: {
-            button: ".navigation .prev",
-            key: "left"
-          },
-          next: {
-            button: ".navigation .next",
-            key: "right"
-          }
+          auto: true,
+          width: 1200,
+          height: "43%",
+          items: {width: 1200, height: "43%"},
+          scroll: {fx: "directscroll", duration: 500, pauseOnHover: true},
+          prev: {button: ".navigation .prev", key: "left"},
+          next: {button: ".navigation .next", key: "right"}
         });
       });
+      
     </script>
 
     <!-- Custom CSS -->
@@ -110,16 +100,16 @@
 
           <div id="carousel">
 
-            <div class="teaser" style="display: inline-block; width: 100%; height: auto;">
-              <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-9.jpg" alt="Image #1" style="width: 100%; height: auto;">
+            <div class="teaser" style="display: block; float: left; width: 1200px; height: 514px">
+              <img class="teaser-image" src="http://dummyimage.com/1200x514/000/fff" alt="Image #1" style="width: 100%; height: auto">
             </div>
 
-            <div class="teaser" style="display: inline-block; width: 100%; height: auto;">
-              <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-8.jpg" alt="Image #2" style="width: 100%; height: auto;">
+            <div class="teaser" style="display: block; float: left; width: 1200px; height: 514px">
+              <img class="teaser-image" src="http://dummyimage.com/1200x514/000/fff" alt="Image #2" style="width: 100%; height: auto">
             </div>
 
-            <div class="teaser" style="display: inline-block; width: 100%; height: auto;">
-              <img src="http://lorempixel.com/image_output/abstract-q-c-1200-514-2.jpg" alt="Image #3" style="width: 100%; height: auto;">
+            <div class="teaser" style="display: block; float: left; width: 1200px; height: 514px">
+              <img class="teaser-image" src="http://dummyimage.com/1200x514/000/fff" alt="Image #3" style="width: 100%; height: auto">
             </div>
 
           </div>
