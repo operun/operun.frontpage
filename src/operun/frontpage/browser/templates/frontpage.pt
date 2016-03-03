@@ -7,53 +7,66 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns="http://www.w3.org/1999/xhtml">
 
-<body>
-  <metal:content-core fill-slot="main">
-    <metal:content-core define-macro="content-core">
+  <body>
+    <metal:content-core fill-slot="main">
+      <metal:content-core define-macro="content-core">
 
-      <script tal:content="view/get_js_vars" type="text/javascript"></script>
-      <script type="text/javascript">
+        <script tal:content="view/get_js_vars" type="text/javascript"></script>
+        <script type="text/javascript">
 
-        require([
-          'jquery',
-          'bootstrap-colequalizer',
-          'carouFredSel',
-        ], function($) {
-          'use strict';
+          require([
+            'jquery', 'bootstrap-colequalizer', 'carouFredSel'
+          ], function ($) {
+            'use strict';
 
-          $('.col-eq').colequalizer();
+            $('.col-eq').colequalizer();
 
-          $(document).ready(function () {
-            var $carousel = $("#teaser-container");
+            $(document).ready(function () {
+              var $carousel = $("#teaser-container");
 
-            $carousel.carouFredSel({
-              responsive: true,
-              auto: true,
-              width: 1200,
-              height: "43%",
-              items: {width: 1200, height: "43%"},
-              scroll: {fx: animation, duration: 500, pauseOnHover: true},
-              prev: {button: ".navigation .prev", key: "left"},
-              next: {button: ".navigation .next", key: "right"}
+              $carousel.carouFredSel({
+                responsive: true,
+                auto: autoscroll,
+                width: 1200,
+                height: "43%",
+                items: {width: 1200, height: "43%"},
+                scroll: {fx: animation, duration: 500, pauseOnHover: true},
+                prev: {button: ".navigation .prev", key: "left"},
+                next: {button: ".navigation .next", key: "right"}
+              });
             });
-          });
 
-        })
+          })
+        </script>
 
-      </script>
+        <section tal:condition="teasers" tal:define="teasers view/teasers">
 
-      <section tal:condition="teasers" tal:define="teasers view/teasers">
+          <div id="teaser-container">
 
-        <div id="teaser-container">
+            <tal:teasers tal:repeat="teaser teasers">
+              <div class="teaser-wrapper" style="display: block; float: left; width: 1200px; height: 514px" tal:define="url teaser/url">
 
-          <tal:teasers tal:repeat="teaser teasers">
-            <div class="teaser-wrapper" style="display: block; float: left; width: 1200px; height: 514px" tal:define="url teaser/url">
+                <!-- Teaser with URL -->
+                <div class="teaser" tal:condition="url">
+                  <a href="" tal:attributes="href url">
+                    <div class="teaser-image">
+                      <img tal:replace="structure teaser/image"/>
+                    </div>
+                    <div class="teaser-text">
+                      <div class="teaser-title">
+                        <h2 tal:content="teaser/title">Teaser Title</h2>
+                      </div>
+                      <div class="teaser-description">
+                        <p tal:content="teaser/description">Teaser Description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
 
-              <!-- Teaser with URL -->
-              <div class="teaser" tal:condition="url">
-                <a href="" tal:attributes="href url">
+                <!-- Teaser without URL -->
+                <div class="teaser" tal:condition="not:url">
                   <div class="teaser-image">
-                    <img tal:replace="structure teaser/image" />
+                    <img tal:replace="structure teaser/image"/>
                   </div>
                   <div class="teaser-text">
                     <div class="teaser-title">
@@ -63,68 +76,54 @@
                       <p tal:content="teaser/description">Teaser Description</p>
                     </div>
                   </div>
+                </div>
+
+              </div>
+            </tal:teasers>
+
+          </div>
+
+          <div id="add-teaser-link" tal:define="link view/add_teaser_link" tal:condition="link">
+            <a href="" tal:attributes="href link">
+              <i class="schilbach-plus-circled"></i>
+            </a>
+          </div>
+
+        </section>
+
+        <section class="frontpage-text">
+          <h1 class="documentFirstHeading" tal:condition="python:context.title and context.show_title"
+                                           tal:content="context/title">Title</h1>
+          <div class="documentDescription description" tal:condition="python:context.description and context.show_description"
+                                                       tal:content="context/description">Lorem ipsum dolor sit amet</div>
+          <div id="parent-fieldname-text" tal:condition="python:context.text and context.show_text"
+                                          tal:content="structure python:context.text.output_relative_to(view.context)"/>
+        </section>
+
+        <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
+          <div class="row col-eq">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" tal:repeat="item news">
+              <div class="news-wrapper">
+                <a href="" tal:attributes="href item/url">
+                  <div class="news-image">
+                    <img tal:replace="structure item/image"/>
+                  </div>
                 </a>
-              </div>
-
-              <!-- Teaser without URL -->
-              <div class="teaser" tal:condition="not:url">
-                <div class="teaser-image">
-                  <img tal:replace="structure teaser/image" />
-                </div>
-                <div class="teaser-text">
-                  <div class="teaser-title">
-                    <h2 tal:content="teaser/title">Teaser Title</h2>
+                <div class="news-text-wrapper">
+                  <div class="news-title">
+                    <h3 tal:content="item/title">Teaser Title</h3>
                   </div>
-                  <div class="teaser-description">
-                    <p tal:content="teaser/description">Teaser Description</p>
+                  <div class="news-description">
+                    <p tal:content="item/description">Teaser Description</p>
                   </div>
-                </div>
-              </div>
-
-            </div>
-          </tal:teasers>
-
-        </div>
-
-        <div id="add-teaser-link" tal:define="link view/add_teaser_link" tal:condition="link">
-          <a href="" tal:attributes="href link"><i class="schilbach-plus-circled"></i></a>
-        </div>
-
-      </section>
-
-      <section class="frontpage-text">
-        <h1 class="documentFirstHeading" tal:condition="python:context.title and context.show_title"
-                                         tal:content="context/title">Title</h1>
-        <div class="documentDescription description" tal:condition="python:context.description and context.show_description"
-                                                     tal:content="context/description">Lorem ipsum dolor sit amet</div>
-        <div id="parent-fieldname-text" tal:condition="python:context.text and context.show_text"
-                                        tal:content="structure python:context.text.output_relative_to(view.context)" />
-      </section>
-
-      <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
-        <div class="row col-eq">
-          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" tal:repeat="item news">
-            <div class="news-wrapper">
-              <a href="" tal:attributes="href item/url">
-                <div class="news-image">
-                  <img tal:replace="structure item/image" />
-                </div>
-              </a>
-              <div class="news-text-wrapper">
-                <div class="news-title">
-                  <h3 tal:content="item/title">Teaser Title</h3>
-                </div>
-                <div class="news-description">
-                  <p tal:content="item/description">Teaser Description</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+      </metal:content-core>
     </metal:content-core>
-  </metal:content-core>
-</body>
+  </body>
 
 </html>
