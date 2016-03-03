@@ -44,7 +44,7 @@
           <div id="teaser-container">
 
             <tal:teasers tal:repeat="teaser teasers">
-              <div class="teaser-wrapper" style="display: block; float: left; width: 1200px; height: 514px" tal:define="url teaser/url">
+              <div class="teaser-wrapper" style="position: relative; display: inline-block; float: left; width: 1200px; height: 514px" tal:define="url teaser/url">
 
                 <!-- Teaser with URL -->
                 <div class="teaser" tal:condition="url">

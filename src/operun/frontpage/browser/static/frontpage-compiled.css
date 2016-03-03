@@ -16,19 +16,20 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 }
 .teaser-text {
   position: absolute;
-  bottom: 1px;
-  width: 20%;
+  bottom: 0;
+  width: 100%;
   padding: 20px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.teaser-title h2 {
-  margin-top: 0;
+.teaser {
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
-.teaser-description p {
-  margin-bottom: 0;
-}
-.teaser-image img {
+.teaser h2,
+.teaser p,
+.teaser img {
   width: 100%;
   height: auto;
 }
