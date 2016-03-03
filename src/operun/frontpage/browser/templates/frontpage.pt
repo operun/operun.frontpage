@@ -22,9 +22,7 @@
             $('.col-eq').colequalizer();
 
             $(document).ready(function () {
-              var $carousel = $("#teaser-container");
-
-              $carousel.carouFredSel({
+              $("#teaser-container").carouFredSel({
                 responsive: true,
                 auto: autoscroll,
                 width: 1200,
