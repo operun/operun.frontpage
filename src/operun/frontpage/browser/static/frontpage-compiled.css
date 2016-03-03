@@ -1,0 +1,71 @@
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-frontpage::after {
+  content: '';
+}
+body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-frontpage::before {
+  content: '';
+}
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-teaser::after {
+  content: '';
+}
+body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before {
+  content: '';
+}
+/* Teaser parameters */
+#teaser-container {
+  margin-bottom: 30px;
+}
+.teaser-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.teaser-title h2 {
+  margin-top: 0;
+}
+.teaser-description p {
+  margin-bottom: 0;
+}
+.teaser-image img {
+  width: 100%;
+  height: auto;
+}
+/* Frontpage parameters */
+.frontpage-text {
+  margin-bottom: 30px;
+}
+.frontpage-news {
+  margin: 0 -15px 0 -15px;
+}
+.news-wrapper {
+  height: auto;
+  margin-bottom: 30px;
+}
+.news-title {
+  color: #846a56;
+}
+.news-image img {
+  width: 100%;
+  height: 100%;
+}
+.news-text-wrapper {
+  margin: 0 0 0 1px;
+}
+/* Overrides */
+.template-view .formHelp {
+  display: none;
+}
+#content-core #form-widgets-image img {
+  width: 100%;
+  height: auto;
+}
+#content-core #form-widgets-image img[alt='JPEG image'] {
+  width: 16px;
+  height: auto;
+}
+.row {
+  padding: 0 15px 0 15px;
+}
+/*# sourceMappingURL=frontpage-compiled.css.map */
