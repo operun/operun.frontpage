@@ -29,15 +29,16 @@
                 height: "43%",
                 items: {width: 1200, height: "43%"},
                 scroll: {fx: animation, duration: 500, pauseOnHover: true},
-                prev: {button: ".navigation .prev", key: "left"},
-                next: {button: ".navigation .next", key: "right"}
+                prev: { button: ".navigation .prev", key: "left" },
+                next: { button: ".navigation .next", key: "right" },
+                pagination : { container: ".pager" }
               });
             });
 
           })
         </script>
 
-        <section tal:condition="teasers" tal:define="teasers view/teasers">
+        <section id="frontpage-teaser" tal:condition="teasers" tal:define="teasers view/teasers">
 
           <div id="teaser-container">
 
@@ -80,6 +81,13 @@
             </tal:teasers>
 
           </div>
+
+          <div class="navigation">
+            <a href="" class="prev browse left"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a href="" class="next browse right"><span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div>
+
+          <div class="pager"></div>
 
           <div id="add-teaser-link" tal:define="link view/add_teaser_link" tal:condition="link">
             <a href="" tal:attributes="href link">
