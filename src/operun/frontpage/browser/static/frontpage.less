@@ -16,8 +16,9 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 
 /* Teaser parameters */
 
-#teaser-container {
+#frontpage-teaser {
   margin-bottom: 30px;
+  position: relative;
 }
 
 .teaser-text {
@@ -49,6 +50,59 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
   width: 100%;
   height: auto;
 }
+
+#frontpage-teaser .navigation {}
+
+#frontpage-teaser .prev,
+#frontpage-teaser .next {
+    position: absolute;
+    z-index: 999;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 30px;
+    padding: 20px 10px;
+    top: 15%;
+}
+
+#frontpage-teaser .prev {
+    left: 0;
+}
+
+#frontpage-teaser .next {
+    right: 0;
+}
+
+#frontpage-teaser .prev:hover,
+#frontpage-teaser .next:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#frontpage-teaser .pager {
+    position: absolute;
+    z-index: 999;
+    top: 20px;
+    line-height: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#frontpage-teaser .pager a {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .5);
+    width: 50px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+#frontpage-teaser .pager a.selected,
+#frontpage-teaser .pager a:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#frontpage-teaser .pager a span { display: none; }
+
+#add-teaser-link {}
+
 
 /* Frontpage parameters */
 
