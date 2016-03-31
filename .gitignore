@@ -10,7 +10,7 @@ buildout-cache/
 develop-eggs/
 parts/
 src/*
-!src/schilbach
+!src/operun
 var/
 htmlcov/
 .coverage
