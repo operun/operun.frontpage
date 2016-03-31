@@ -6,7 +6,7 @@
   </records>
 
   <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/caroufredsel">
-    <value key="js">++resource++operun.frontpage/caroufredsel-6.2.1.js</value>
+    <value key="js">++resource++operun.frontpage/carouFredSel-6.2.1.js</value>
     <value key="deps">jquery</value>
   </records>
 
