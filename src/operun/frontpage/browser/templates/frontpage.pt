@@ -11,7 +11,8 @@
     <metal:content-core fill-slot="main">
       <metal:content-core define-macro="content-core">
 
-        <script tal:content="view/get_js_vars" type="text/javascript"></script>
+        <!-- [id="import-teaser-variables"] necessary for external packages -->
+        <script id="import-teaser-variables" tal:content="view/get_js_vars" type="text/javascript"></script>
         <script type="text/javascript">
 
           require([
