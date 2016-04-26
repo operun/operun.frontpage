@@ -17,13 +17,14 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
 /* Teaser parameters */
 
 #frontpage-teaser {
-  margin-bottom: 30px;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .navigation {
   position: absolute;
   top: 50%;
+  display: none;
   width: 100%;
   margin-top: -35px;
 }
@@ -58,56 +59,53 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before 
   height: auto;
 }
 
-#frontpage-teaser .navigation {}
-
 #frontpage-teaser .prev,
 #frontpage-teaser .next {
-    position: absolute;
-    color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 0, 0, .5);
-    font-size: 30px;
-    padding: 20px 10px;
-    top: 15%;
+  font-size: 30px;
+  position: absolute;
+  top: 15%;
+  padding: 20px 10px;
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(0, 0, 0, .5);
 }
 
 #frontpage-teaser .prev {
-    left: 0;
+  left: 0;
 }
 
 #frontpage-teaser .next {
-    right: 0;
+  right: 0;
 }
 
 #frontpage-teaser .prev:hover,
 #frontpage-teaser .next:hover {
-    background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, .8);
 }
 
 #frontpage-teaser .pager {
-    position: absolute;
-    top: 20px;
-    line-height: 0;
-    width: 100%;
-    text-align: center;
+  line-height: 0;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 #frontpage-teaser .pager a {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, .5);
-    width: 50px;
-    height: 10px;
-    margin-right: 10px;
+  display: none;
+  width: 50px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 #frontpage-teaser .pager a.selected,
 #frontpage-teaser .pager a:hover {
-    background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, .8);
 }
 
-#frontpage-teaser .pager a span { display: none; }
-
-#add-teaser-link {}
-
+#frontpage-teaser .pager a span {
+  display: none;
+}
 
 /* Frontpage parameters */
 
