@@ -18,6 +18,10 @@ htmlcov/
 output.xml
 log.html
 report.html
+include/
+lib/
+local/
+pip-selfcheck.json
 
 # editor config
 .project
