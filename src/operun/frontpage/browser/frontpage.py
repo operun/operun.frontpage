@@ -2,6 +2,7 @@
 
 from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.component import getMultiAdapter
 from plone import api
 
 
@@ -67,6 +68,15 @@ class FrontpageView(BrowserView):
 
         return tag
 
+    def language(self):
+        """
+        @return: Two-letter string, the active language code
+        """
+        context = self.context.aq_inner
+        portal_state = getMultiAdapter((context, self.request), name=u'plone_portal_state')
+        current_language = portal_state.language()
+        return current_language
+
     def get_news(self):
         """
         Get news items from the catalog and return its objects.
@@ -74,7 +84,8 @@ class FrontpageView(BrowserView):
         brains = api.content.find(portal_type='News Item',
                                   review_state='published',
                                   sort_on='Date',
-                                  sort_order='reverse')
+                                  sort_order='reverse',
+                                  Language=self.language())
 
         items = []
 
