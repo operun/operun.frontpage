@@ -41,13 +41,9 @@
     <permission value="View"/>
   </action>
 
-  <action title="Add Teaser" action_id="add_teaser"
-                             category="object_buttons"
-                             condition_expr=""
-                             description="Add a teaser to the frontpage."
-                             icon_expr=""
-                             link_target=""
-                             url_expr="string:${object_url}/++add++Teaser" visible="True">
+  <action title="Add Teaser" action_id="add_teaser" category="object_buttons"
+    condition_expr="" description="Add a teaser to the frontpage." icon_expr=""
+    link_target="" url_expr="string:${object_url}/++add++Teaser" visible="True">
     <permission value="Modify portal content"/>
   </action>
 
