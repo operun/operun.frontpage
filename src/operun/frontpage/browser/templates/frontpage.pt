@@ -22,6 +22,13 @@
 
             $('.col-eq').colequalizer();
 
+            $('#frontpage-teaser').hover(function() {
+              $('.navigation').fadeIn();
+              $(".pager a").fadeIn().css("display", "inline-block");
+            }, function() {
+              $('.navigation, .pager a').fadeOut();
+            });
+
             $(document).ready(function () {
               $("#teaser-container").carouFredSel({
                 responsive: true,
