@@ -22,11 +22,13 @@
 
             $('.col-eq').colequalizer();
 
-            $('#frontpage-teaser').hover(function() {
-              $('.navigation').fadeIn();
-              $(".pager a").fadeIn().css("display", "inline-block");
-            }, function() {
-              $('.navigation, .pager a').fadeOut();
+            $(function() {
+              $('#frontpage-teaser').hover(function() {
+                $('.navigation').fadeIn();
+                $(".pager a").fadeIn().css("display", "inline-block");
+              }, function() {
+                $('.navigation, .pager a').fadeOut();
+              });
             });
 
             $(document).ready(function () {
