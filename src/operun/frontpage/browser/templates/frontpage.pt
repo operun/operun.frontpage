@@ -119,21 +119,21 @@
         <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
           <div class="row col-eq">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" tal:repeat="item news">
-              <div class="news-wrapper">
-                <a href="" tal:attributes="href item/url">
+              <a href="" tal:attributes="href item/url">
+                <div class="news-wrapper">
                   <div class="news-image">
-                    <img tal:replace="structure item/image"/>
+                    <img tal:replace="structure item/image" />
                   </div>
-                </a>
-                <div class="news-text-wrapper">
-                  <div class="news-title">
-                    <h3 tal:content="item/title">Teaser Title</h3>
-                  </div>
-                  <div class="news-description">
-                    <p tal:content="item/description">Teaser Description</p>
+                  <div class="news-text-wrapper">
+                    <div class="news-title">
+                      <h3 tal:content="item/title">Teaser Title</h3>
+                    </div>
+                    <div class="news-description">
+                      <p tal:content="item/description">Teaser Description</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </section>
