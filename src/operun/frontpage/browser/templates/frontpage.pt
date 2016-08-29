@@ -48,7 +48,7 @@
           })
         </script>
 
-        <section id="frontpage-teaser" tal:condition="teasers" tal:define="teasers view/teasers">
+        <section id="frontpage-teaser" tal:define="teasers view/get_teasers" tal:condition="teasers">
 
           <div id="teaser-container">
 

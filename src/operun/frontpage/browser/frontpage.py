@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from DateTime import DateTime
+from plone import api
 from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter
-from plone import api
 
 
 class FrontpageView(BrowserView):
@@ -59,12 +60,12 @@ class FrontpageView(BrowserView):
 
         return autoscroll + animation
 
-    def get_tag(self, context, item):
+    def get_tag(self, context, item, height, width):
         """
         Return image tag.
         """
         images_view = api.content.get_view('images', context, self.request)  # noqa
-        tag = images_view.tag(item, height=165, width=380, direction='down')  # noqa
+        tag = images_view.tag(item, height=height, width=width, direction='down')  # noqa
 
         return tag
 
@@ -73,7 +74,8 @@ class FrontpageView(BrowserView):
         @return: Two-letter string, the active language code
         """
         context = self.context.aq_inner
-        portal_state = getMultiAdapter((context, self.request), name=u'plone_portal_state')
+        portal_state = getMultiAdapter(
+            (context, self.request), name=u'plone_portal_state')
         current_language = portal_state.language()
         return current_language
 
@@ -96,7 +98,7 @@ class FrontpageView(BrowserView):
             url = obj.absolute_url()
 
             if obj.image:
-                tag = self.get_tag(obj, 'image')
+                tag = self.get_tag(obj, 'image', 165, 380)
             else:
                 if self.context.default_image:
                     tag = self.get_tag(self.context, 'default_image')
@@ -120,30 +122,29 @@ class FrontpageView(BrowserView):
         else:
             return items
 
-    def get_teaser(self):
-        """
-        Get folder contents from container.
-        """
-        items = self.context.listFolderContents(
-            contentFilter={'portal_type': 'Teaser'})
-
-        return items
-
-    def teasers(self):
+    def get_teasers(self):
         """
         Return dictionary values to template.
         """
+        brains = api.content.find(portal_type='Teaser',
+                                  review_state='published',
+                                  sort_on='Date',
+                                  sort_order='reverse',
+                                  Language=self.language(),
+                                  effectiveRange=DateTime())
+
         dictionary = []
 
-        for teaser in self.get_teaser():
-            title = teaser.title
-            description = teaser.description
-            url = teaser.url
-            tag = None
+        for teaser in brains:
+            obj = teaser.getObject()
+            title = obj.title
+            description = obj.description
+            url = obj.absolute_url()
 
-            if teaser.image:
-                images_view = api.content.get_view('images', teaser, self.request)  # noqa
-                tag = images_view.tag('image', height=514, width=1200, direction='down')  # noqa
+            if obj.image:
+                tag = self.get_tag(obj, 'image', 514, 1200)
+            else:
+                tag = None
 
             data = {'title': title,
                     'description': description,
