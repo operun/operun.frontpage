@@ -1,7 +1,7 @@
 <registry>
 
   <records interface='Products.CMFPlone.interfaces.IResourceRegistry' prefix="plone.resources/colequalizer">
-    <value key="js">++resource++operun.frontpage/colequalizer-1.0.2.js</value>
+    <value key="js">++resource++operun.frontpage/bootstrap-colequalizer-1.1.0.js</value>
     <value key="deps">jquery</value>
   </records>
 
