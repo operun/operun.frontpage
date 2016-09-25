@@ -18,10 +18,14 @@ htmlcov/
 output.xml
 log.html
 report.html
+pip-selfcheck.json
+
+# virtualenv
+.Python
+etc/
 include/
 lib/
 local/
-pip-selfcheck.json
 
 # editor config
 .project
@@ -34,3 +38,6 @@ node_modules/
 package.json
 Gruntfile.js
 temp_resources
+
+# coverage
+coverage_report/
