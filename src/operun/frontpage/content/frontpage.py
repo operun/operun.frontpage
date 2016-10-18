@@ -266,6 +266,80 @@ class IFrontpage(Interface):
         required=False,
     )
 
+    fieldset(
+        'article',
+        label=_(u'frontpage_fieldset_article_label', default=u'Article'),
+        fields=(
+            'show_article',
+            'section_article_heading',
+            'limit_article',
+            'default_article_image'
+        ),
+    )
+
+    show_article = schema.Bool(
+        title=_(u"frontpage_show_article_title", default="Show article"),
+        description=_(u'frontpage_show_article_description', default=u'Enable to display article tiles below news.'),  # noqa
+        required=False,
+        default=True,
+    )
+
+    section_article_heading = schema.TextLine(
+        title=_(u"frontpage_section_article_heading_title", default="Section Article Heading"),  # noqa
+        description=_(u'frontpage_section_article_heading_description', default=u'Enter a Heading for the Article Section.'),  # noqa
+        required=False,
+    )
+
+    default_article_image = NamedBlobImage(
+        title=_(u'frontpage_default_article_image_title', default='Default article item image'),  # noqa
+        description=_(u'frontpage_default_article_image_description', default=u'Upload a default article item image.'),  # noqa
+        required=False,
+    )
+
+    limit_article = schema.Int(
+        title=_(u"frontpage_limit_article_title", default="Number of News items"),  # noqa
+        description=_(u'frontpage_limit_article_description', default=u'Limit the number of displayed items.'),  # noqa
+        default=2,
+        required=False,
+    )
+
+    fieldset(
+        'tile',
+        label=_(u'frontpage_fieldset_tile_label', default=u'Tile'),
+        fields=(
+            'show_tile',
+            'section_tile_heading',
+            'limit_tile',
+            'default_tile_image'
+        ),
+    )
+
+    show_tile = schema.Bool(
+        title=_(u"frontpage_show_tile_title", default="Show tile"),
+        description=_(u'frontpage_show_tile_description', default=u'Enable to display tile tiles below news.'),  # noqa
+        required=False,
+        default=True,
+    )
+
+    section_tile_heading = schema.TextLine(
+        title=_(u"frontpage_section_tile_heading_title", default="Section Tile Heading"),  # noqa
+        description=_(u'frontpage_section_tile_heading_description', default=u'Enter a Heading for the Tile Section.'),  # noqa
+        required=False,
+    )
+
+    default_tile_image = NamedBlobImage(
+        title=_(u'frontpage_default_tile_image_title', default='Default tile item image'),  # noqa
+        description=_(u'frontpage_default_tile_image_description', default=u'Upload a default tile item image.'),  # noqa
+        required=False,
+    )
+
+    limit_tile = schema.Int(
+        title=_(u"frontpage_limit_tile_title", default="Number of News items"),  # noqa
+        description=_(u'frontpage_limit_tile_description', default=u'Limit the number of displayed items.'),  # noqa
+        default=2,
+        required=False,
+    )
+
 
 class Frontpage(Container):
     """
