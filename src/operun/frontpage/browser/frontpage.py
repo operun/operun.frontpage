@@ -87,7 +87,8 @@ class FrontpageView(BrowserView):
                                   review_state='published',
                                   sort_on='Date',
                                   sort_order='reverse',
-                                  Language=self.language())
+                                  Language=self.language()
+                                  )
 
         items = []
 
@@ -126,12 +127,15 @@ class FrontpageView(BrowserView):
         """
         Return dictionary values to template.
         """
+        path = '/'.join(self.context.getPhysicalPath())
         brains = api.content.find(portal_type='Teaser',
+                                  path=path,
                                   review_state='published',
                                   sort_on='Date',
                                   sort_order='reverse',
                                   Language=self.language(),
-                                  effectiveRange=DateTime())
+                                  effectiveRange=DateTime()
+                                  )
 
         dictionary = []
 
