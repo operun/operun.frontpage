@@ -20,8 +20,8 @@ long_description = (
 setup(
     name='operun.frontpage',
     version='1.1.0',
-    description="An add-on for Plone",
-    long_description=long_description,
+    description="A Frontpage Content Type for Plone",
+    long_description="A configurable Frontpage Content Type for Plone 5",
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         "Environment :: Web Environment",

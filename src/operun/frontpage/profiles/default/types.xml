@@ -4,4 +4,5 @@
   <object name="Frontpage" meta_type="Dexterity FTI"/>
   <object name="Teaser" meta_type="Dexterity FTI"/>
   <object name="Tile" meta_type="Dexterity FTI"/>
+  <object name="Article" meta_type="Dexterity FTI"/>
 </object>
