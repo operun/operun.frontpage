@@ -1,20 +1,17 @@
 <?xml version="1.0"?>
-<object name="Frontpage" meta_type="Dexterity FTI" i18n:domain="operun.frontpage"
+<object name="Article" meta_type="Dexterity FTI" i18n:domain="operun.frontpage"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
-  <property name="title" i18n:translate="">Frontpage</property>
+  <property name="title" i18n:translate="">Article</property>
   <property name="description"
     i18n:translate=""></property>
   <property name="icon_expr"></property>
-  <property name="factory">Frontpage</property>
-  <property name="add_view_expr">string:${folder_url}/++add++Frontpage</property>
+  <property name="factory">Article</property>
+  <property name="add_view_expr">string:${folder_url}/++add++Article</property>
   <property name="link_target"></property>
   <property name="immediate_view">view</property>
-  <property name="global_allow">True</property>
-  <property name="filter_content_types">True</property>
+  <property name="global_allow">False</property>
+  <property name="filter_content_types">False</property>
   <property name="allowed_content_types">
-    <element value="Teaser"/>
-    <element value="Tile"/>
-    <element value="Article"/>
   </property>
   <property name="allow_discussion">False</property>
   <property name="default_view">view</property>
@@ -24,11 +21,12 @@
   <property name="default_view_fallback">False</property>
   <property name="add_permission">cmf.AddPortalContent</property>
 
-  <property name="schema">operun.frontpage.content.frontpage.IFrontpage</property>
-  <property name="klass">operun.frontpage.content.frontpage.Frontpage</property>
+  <property name="schema">operun.frontpage.content.article.IArticle</property>
+  <property name="klass">operun.frontpage.content.article.Article</property>
   <property name="behaviors">
     <element value="plone.app.content.interfaces.INameFromTitle"/>
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
+    <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
   </property>
 
   <property name="model_source"></property>
@@ -42,13 +40,6 @@
     visible="True">
     <permission value="View"/>
   </action>
-
-  <action title="Add Teaser" action_id="add_teaser" category="object_buttons"
-    condition_expr="" description="Add a teaser to the frontpage." icon_expr=""
-    link_target="" url_expr="string:${object_url}/++add++Teaser" visible="True">
-    <permission value="Modify portal content"/>
-  </action>
-
   <action title="Edit" action_id="edit" category="object" condition_expr=""
     description="" icon_expr="" link_target=""
     url_expr="string:${object_url}/edit" visible="True">
