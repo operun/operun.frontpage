@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from plone.dexterity.content import Item
 from operun.frontpage import _
+from plone.dexterity.content import Item
+from plone.namedfile.field import NamedBlobImage
 from zope import schema
 from zope.interface import Interface
-from zope.schema.vocabulary import SimpleTerm
-from zope.schema.vocabulary import SimpleVocabulary
-from plone.namedfile.field import NamedBlobImage
-
+from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 
 ColorVocabulary = SimpleVocabulary(
     [SimpleTerm(value=u'frontpage-black', title=_(u'Black')),
@@ -26,13 +24,13 @@ class ITile(Interface):
 
     icon = schema.TextLine(
         title=_(u'tile_icon_title', default='Icon'),
-        description=_(u'tile_icon_description', default=u'Enter Icon from available Icons'),  # noqa
+        description=_(u'tile_icon_description', default=u'Enter an icon from the available icons'),  # noqa
         required=False,
     )
 
     color = schema.Choice(
-        title=_(u'tile_color_title', default=u'Tile Color'),
-        description=_(u'tile_color_description', default=u'Select the background color for the tile.'),  # noqa
+        title=_(u'tile_color_title', default=u'Tile color'),
+        description=_(u'tile_color_description', default=u'Select a background colour for the tile.'),  # noqa
         vocabulary=ColorVocabulary,
         required=False,
         )
