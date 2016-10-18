@@ -15,6 +15,7 @@
     <element value="Article"/>
     <element value="Teaser"/>
     <element value="Tile"/>
+    <element value="Article"/>
   </property>
   <property name="allow_discussion">False</property>
   <property name="default_view">view</property>
