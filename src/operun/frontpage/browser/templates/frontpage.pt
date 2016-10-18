@@ -1,4 +1,4 @@
-<html i18n:domain="plone"
+<html i18n:domain="operun.frontpage"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
       xml:lang="en"
@@ -11,7 +11,6 @@
     <metal:content-core fill-slot="main">
       <metal:content-core define-macro="content-core">
 
-        <!-- [id="import-teaser-variables"] necessary for external packages -->
         <script id="import-teaser-variables" tal:content="view/get_js_vars" type="text/javascript"></script>
         <script type="text/javascript">
 
@@ -23,7 +22,7 @@
             $('.col-eq').colequalizer();
 
             $(function() {
-              $('#frontpage-teaser').hover(function() {
+              $('#section-teaser').hover(function() {
                 $('.navigation').fadeIn();
                 $(".pager a").fadeIn().css("display", "inline-block");
               }, function() {
@@ -48,7 +47,7 @@
           })
         </script>
 
-        <section id="frontpage-teaser" tal:define="teasers view/get_teasers" tal:condition="teasers">
+        <section id="section-teaser" tal:define="teasers view/teasers" tal:condition="teasers">
 
           <div id="teaser-container">
 
@@ -93,49 +92,109 @@
           </div>
 
           <div class="navigation">
-            <a href="" class="prev browse left"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a href="" class="next browse right"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="" class="prev browse left"><span class="glyphicon glyphicon-menu-left"></span></a>
+            <a href="" class="next browse right"><span class="glyphicon glyphicon-menu-right"></span></a>
           </div>
 
           <div class="pager"></div>
 
-          <div id="add-teaser-link" tal:define="link view/add_teaser_link" tal:condition="link">
-            <a href="" tal:attributes="href link">
-              <i class="schilbach-plus-circled"></i>
-            </a>
+        </section>
+
+
+        <section id="section-text" class="row no-padding">
+
+          <div class="col-lg-12">
+            <h1 class="documentFirstHeading" tal:condition="python:context.title and context.show_title" tal:content="context/title">Title</h1>
+            <div class="documentDescription description" tal:condition="python:context.description and context.show_description" tal:content="context/description">Lorem ipsum dolor sit amet</div>
+            <div id="parent-fieldname-text" tal:condition="python:context.text and context.show_text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
           </div>
 
         </section>
 
-        <section class="frontpage-text">
-          <h1 class="documentFirstHeading" tal:condition="python:context.title and context.show_title"
-                                           tal:content="context/title">Title</h1>
-          <div class="documentDescription description" tal:condition="python:context.description and context.show_description"
-                                                       tal:content="context/description">Lorem ipsum dolor sit amet</div>
-          <div id="parent-fieldname-text" tal:condition="python:context.text and context.show_text"
-                                          tal:content="structure python:context.text.output_relative_to(view.context)"/>
-        </section>
 
-        <section class="frontpage-news" tal:condition="news" tal:define="news view/get_news">
-          <div class="row col-eq">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" tal:repeat="item news">
-              <a href="" tal:attributes="href item/url">
-                <div class="news-wrapper">
-                  <div class="news-image">
-                    <img tal:replace="structure item/image" />
-                  </div>
-                  <div class="news-text-wrapper">
-                    <div class="news-title">
-                      <h3 tal:content="item/title">Teaser Title</h3>
+        <section id="section-news" class="row no-padding" tal:define="items view/news" tal:condition="items">
+
+          <div class="col-lg-12">
+            <h2 tal:condition="context/section_news_heading" tal:content="context/section_news_heading">News</h2>
+          </div>
+
+          <div class="col-eq">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" tal:repeat="item items">
+              <div class="item-wrapper">
+                <a href="" tal:attributes="href item/url">
+                    <div class="item-image">
+                        <img tal:replace="structure item/image"/>
                     </div>
-                    <div class="news-description">
-                      <p tal:content="item/description">Teaser Description</p>
+                    <div class="item-title">
+                        <h3 tal:content="item/title">Title</h3>
                     </div>
-                  </div>
-                </div>
-              </a>
+                    <div class="item-description">
+                        <p tal:content="item/description">Description</p>
+                    </div>
+                 </a>
+              </div>
             </div>
           </div>
+
+        </section>
+
+
+        <section id="section-articles" class="row no-padding" tal:define="items view/articles" tal:condition="items">
+
+          <div class="col-lg-12">
+            <h2 tal:condition="context/section_article_heading" tal:content="context/section_article_heading">Articles</h2>
+          </div>
+
+          <div class="col-eq">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" tal:repeat="item items">
+              <div class="item-wrapper">
+                <a href="" tal:attributes="href item/url">
+                    <div class="item-image">
+                        <img tal:replace="structure item/image"/>
+                    </div>
+                    <div class="item-title">
+                        <h3 tal:content="item/title">Title</h3>
+                    </div>
+                    <div class="item-description">
+                        <p tal:content="item/description">Description</p>
+                    </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+
+        <section id="section-tiles" class="row no-padding" tal:define="items view/tiles" tal:condition="items">
+
+          <div class="col-lg-12">
+            <h2 tal:condition="context/section_tile_heading" tal:content="context/section_tile_heading">Topics</h2>
+          </div>
+
+          <div class="col-eq">
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" tal:repeat="item items">
+              <div class="item-wrapper">
+                <a href="" tal:attributes="href item/url">
+
+                    <div class="tile"
+                         tal:define="color item/color"
+                         tal:attributes="class python:'tile '+color;
+                                         style item/style;">
+
+                        <div class="item-icon">
+                            <i class="glyphicon glyphicon-ok" tal:attributes="class item/icon" />
+                        </div>
+                        <div class="item-title">
+                            <h3 tal:content="item/title">Title</h3>
+                        </div>
+                    </div>
+
+                 </a>
+              </div>
+            </div>
+          </div>
+
         </section>
 
       </metal:content-core>

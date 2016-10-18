@@ -1,0 +1,105 @@
+/* Teaser parameters */
+
+#section-teaser {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#section-teaser .navigation {
+  position: absolute;
+  top: 50%;
+  display: none;
+  width: 100%;
+  margin-top: -35px;
+}
+
+#section-teaser .teaser-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#section-teaser .teaser {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+#section-teaser .teaser h2 {
+  margin-top: 0;
+}
+
+#section-teaser .teaser p {
+  margin-bottom: 0;
+}
+
+#section-teaser .teaser h2,
+#section-teaser .teaser p,
+#section-teaser .teaser img {
+  width: 100%;
+  height: auto;
+}
+
+#section-teaser .prev,
+#section-teaser .next {
+  font-size: 30px;
+  position: absolute;
+  top: 15%;
+  padding: 20px 10px;
+  color: rgba(255, 255, 255, .5);
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#section-teaser .prev {
+  left: 0;
+}
+
+#section-teaser .next {
+  right: 0;
+}
+
+#section-teaser .prev:hover,
+#section-teaser .next:hover {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+#section-teaser .pager {
+  line-height: 0;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+#section-teaser .pager a {
+  display: none;
+  width: 50px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#section-teaser .pager a.selected,
+#section-teaser .pager a:hover {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+#section-teaser .pager a span {
+  display: none;
+}
+
+@media (max-width: @screen-sm-max) {
+
+  #section-teaser .teaser-description {
+    display: none;
+  }
+
+  #section-teaser .teaser-title h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+}
