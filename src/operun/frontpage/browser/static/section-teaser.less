@@ -11,6 +11,7 @@
   display: none;
   width: 100%;
   margin-top: -35px;
+  z-index: 2000;
 }
 
 #section-teaser .teaser-text {
@@ -19,7 +20,7 @@
   width: 100%;
   padding: 20px;
   color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #section-teaser .teaser {
@@ -49,8 +50,8 @@
   position: absolute;
   top: 15%;
   padding: 20px 10px;
-  color: rgba(255, 255, 255, .5);
-  background-color: rgba(0, 0, 0, .5);
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #section-teaser .prev {
@@ -63,7 +64,7 @@
 
 #section-teaser .prev:hover,
 #section-teaser .next:hover {
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #section-teaser .pager {
@@ -72,6 +73,7 @@
   top: 20px;
   width: 100%;
   text-align: center;
+  z-index: 2000;
 }
 
 #section-teaser .pager a {
@@ -79,12 +81,12 @@
   width: 50px;
   height: 10px;
   margin-right: 10px;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #section-teaser .pager a.selected,
 #section-teaser .pager a:hover {
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #section-teaser .pager a span {
@@ -92,7 +94,6 @@
 }
 
 @media (max-width: @screen-sm-max) {
-
   #section-teaser .teaser-description {
     display: none;
   }
@@ -101,5 +102,4 @@
     margin: 0;
     font-size: 16px;
   }
-
 }
