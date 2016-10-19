@@ -17,7 +17,7 @@ class ITeaser(Interface):
 
     image = NamedBlobImage(
         title=_(u'teaser_image_title', default='Image'),
-        description=_(u'teaser_image_description', default=u'Upload an image to accompany your teaser.'),  # noqa
+        description=_(u'teaser_image_description', default=u'Upload an image for the teaser.'),  # noqa
         required=True,
     )
 

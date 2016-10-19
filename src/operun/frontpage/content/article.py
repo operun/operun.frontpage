@@ -17,7 +17,7 @@ class IArticle(Interface):
 
     image = NamedBlobImage(
         title=_(u'article_image_title', default='Image'),
-        description=_(u'article_image_description', default=u'Upload an image to accompany your article.'),  # noqa
+        description=_(u'article_image_description', default=u'Upload an image for the article.'),  # noqa
         required=True,
     )
 

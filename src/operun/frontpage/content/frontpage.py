@@ -31,21 +31,21 @@ class IFrontpage(Interface):
 
     show_title = schema.Bool(
         title=_(u"frontpage_show_title_title", default="Show title"),
-        description=_(u'frontpage_show_title_description', default=u'Enable or disable frontpage title.'),  # noqa
+        description=_(u'frontpage_show_title_description', default=u'Enable or disable the frontpage title.'),  # noqa
         required=False,
         default=True,
     )
 
     show_description = schema.Bool(
         title=_(u"frontpage_show_description_title", default="Show description"),  # noqa
-        description=_(u'frontpage_show_description_description', default=u'Enable or disable frontpage description.'),  # noqa
+        description=_(u'frontpage_show_description_description', default=u'Enable or disable the frontpage description.'),  # noqa
         required=False,
         default=True,
     )
 
     show_text = schema.Bool(
         title=_(u"frontpage_show_text_title", default="Show text"),
-        description=_(u'frontpage_show_text_description', default=u'Enable or disable text below carousel.'),  # noqa
+        description=_(u'frontpage_show_text_description', default=u'Enable or disable description below the carousel.'),  # noqa
         required=False,
         default=True,
     )
@@ -68,15 +68,15 @@ class IFrontpage(Interface):
     )
 
     carousel_animation = schema.Choice(
-        title=_(u'frontpage_carousel_animation_title', default=u'Animation'),
+        title=_(u'frontpage_carousel_animation_title', default=u'Carousel animation'),  # noqa
         description=_(u'frontpage_carousel_animation_description', default=u'Select a transition effect for the carousel.'),  # noqa
         vocabulary=EffectVocabulary,
         required=False,
         )
 
     carousel_autoscroll = schema.Int(
-        title=_(u'frontpage_carousel_autoscroll_title', default=u'Autoscroll'),
-        description=_(u'frontpage_carousel_autoscroll_description', default=u'Select transition delay for the carousel.'),  # noqa
+        title=_(u'frontpage_carousel_autoscroll_title', default=u'Carousel autoscroll'),  # noqa
+        description=_(u'frontpage_carousel_autoscroll_description', default=u'Select a transition delay for the carousel.'),  # noqa
         default=5000,
         required=False,
         )
@@ -86,36 +86,36 @@ class IFrontpage(Interface):
         label=_(u'frontpage_fieldset_news_label', default=u'News'),
         fields=(
             'show_news',
+            'section_news_heading',
             'limit_news',
-            'default_image',
-            'section_news_heading'
+            'default_image'
         ),
     )
 
     show_news = schema.Bool(
         title=_(u"frontpage_show_news_title", default="Show news"),
-        description=_(u'frontpage_show_news_description', default=u'Enable the displaying of news below carousel.'),  # noqa
+        description=_(u'frontpage_show_news_description', default=u'Display news below carousel.'),  # noqa
         required=False,
         default=True,
     )
 
     section_news_heading = schema.TextLine(
-        title=_(u"frontpage_section_news_heading_title", default="Section news heading"),  # noqa
+        title=_(u"frontpage_section_news_heading_title", default="News heading"),  # noqa
         description=_(u'frontpage_section_news_heading_description', default=u'Enter a heading for the news section.'),  # noqa
         required=False,
     )
 
-    default_image = NamedBlobImage(
-        title=_(u'frontpage_default_image_title', default='Default news item image'),  # noqa
-        description=_(u'frontpage_default_image_description', default=u'Upload a default news item image. Recommended.'),  # noqa
-        required=False,
-    )
-
     limit_news = schema.Int(
-        title=_(u"frontpage_limit_news_title", default="Number of news items"),
-        description=_(u'frontpage_limit_news_description', default=u'Limit the number of displayed items.'),  # noqa
+        title=_(u"frontpage_limit_news_title", default="Limit news"),
+        description=_(u'frontpage_limit_news_description', default=u'Limit the number of displayed news items.'),  # noqa
         required=False,
         default=6,
+    )
+
+    default_image = NamedBlobImage(
+    title=_(u'frontpage_default_image_title', default='Default image'),  # noqa
+    description=_(u'frontpage_default_image_description', default=u'Upload a default news item image.'),  # noqa
+    required=False,
     )
 
     fieldset(
@@ -131,28 +131,28 @@ class IFrontpage(Interface):
 
     show_article = schema.Bool(
         title=_(u"frontpage_show_article_title", default="Show article"),
-        description=_(u'frontpage_show_article_description', default=u'Enable the displaying of articles below news.'),  # noqa
+        description=_(u'frontpage_show_article_description', default=u'Display articles below news.'),  # noqa
         required=False,
         default=True,
     )
 
     section_article_heading = schema.TextLine(
-        title=_(u"frontpage_section_article_heading_title", default="Section article heading"),  # noqa
+        title=_(u"frontpage_section_article_heading_title", default="Article heading"),  # noqa
         description=_(u'frontpage_section_article_heading_description', default=u'Enter a heading for the article section.'),  # noqa
         required=False,
     )
 
-    default_article_image = NamedBlobImage(
-        title=_(u'frontpage_default_article_image_title', default='Default article item image'),  # noqa
-        description=_(u'frontpage_default_article_image_description', default=u'Upload a default article item image.'),  # noqa
+    limit_article = schema.Int(
+        title=_(u"frontpage_limit_article_title", default="Limit articles"),  # noqa
+        description=_(u'frontpage_limit_article_description', default=u'Limit the number of displayed article items.'),  # noqa
+        default=2,
         required=False,
     )
 
-    limit_article = schema.Int(
-        title=_(u"frontpage_limit_article_title", default="Number of news items"),  # noqa
-        description=_(u'frontpage_limit_article_description', default=u'Limit the number of displayed items.'),  # noqa
-        default=2,
-        required=False,
+    default_article_image = NamedBlobImage(
+    title=_(u'frontpage_default_article_image_title', default='Default image'),  # noqa
+    description=_(u'frontpage_default_article_image_description', default=u'Upload a default article item image.'),  # noqa
+    required=False,
     )
 
     fieldset(
@@ -168,28 +168,28 @@ class IFrontpage(Interface):
 
     show_tile = schema.Bool(
         title=_(u"frontpage_show_tile_title", default="Show tile"),
-        description=_(u'frontpage_show_tile_description', default=u'Enable the displaying of tiles below news.'),  # noqa
+        description=_(u'frontpage_show_tile_description', default=u'Display tiles below news.'),  # noqa
         required=False,
         default=True,
     )
 
     section_tile_heading = schema.TextLine(
-        title=_(u"frontpage_section_tile_heading_title", default="Section tile heading"),  # noqa
+        title=_(u"frontpage_section_tile_heading_title", default="Tile heading"),  # noqa
         description=_(u'frontpage_section_tile_heading_description', default=u'Enter a heading for the tile section.'),  # noqa
         required=False,
     )
 
-    default_tile_image = NamedBlobImage(
-        title=_(u'frontpage_default_tile_image_title', default='Default tile item image'),  # noqa
-        description=_(u'frontpage_default_tile_image_description', default=u'Upload a default tile item image.'),  # noqa
+    limit_tile = schema.Int(
+        title=_(u"frontpage_limit_tile_title", default="Limit tiles"),  # noqa
+        description=_(u'frontpage_limit_tile_description', default=u'Limit the number of displayed tile items.'),  # noqa
+        default=2,
         required=False,
     )
 
-    limit_tile = schema.Int(
-        title=_(u"frontpage_limit_tile_title", default="Number of news items"),  # noqa
-        description=_(u'frontpage_limit_tile_description', default=u'Limit the number of displayed items.'),  # noqa
-        default=2,
-        required=False,
+    default_tile_image = NamedBlobImage(
+    title=_(u'frontpage_default_tile_image_title', default='Default image'),  # noqa
+    description=_(u'frontpage_default_tile_image_description', default=u'Upload a default tile item image.'),  # noqa
+    required=False,
     )
 
 

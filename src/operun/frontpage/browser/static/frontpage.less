@@ -9,15 +9,44 @@
 @frontpage-grey: #2E3133;
 @frontpage-blue: #16A1E3;
 
-@import 'contenttypes.less';
 @import 'section-articles.less';
 @import 'section-news.less';
 @import 'section-teaser.less';
 @import 'section-text.less';
 @import 'section-tiles.less';
 
-.template-view .formHelp {
-  display: none;
+/* Content Type icons */
+
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-article::after {
+  content: '';
+}
+
+body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-article::before {
+  content: '';
+}
+
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-frontpage::after {
+  content: '';
+}
+
+body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-frontpage::before {
+  content: '';
+}
+
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-teaser::after {
+  content: '';
+}
+
+body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-teaser::before {
+  content: '';
+}
+
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-tile::after {
+  content: '';
+}
+
+body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-tile::before {
+  content: '';
 }
 
 #content-core #form-widgets-image img {

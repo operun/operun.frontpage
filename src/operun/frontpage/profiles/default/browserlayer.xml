@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <layers>
   <layer
-      name="operun.frontpage"
-      interface="operun.frontpage.interfaces.IOperunFrontpageLayer"
-      />
+    name="operun.frontpage"
+    interface="operun.frontpage.interfaces.IOperunFrontpageLayer"
+  />
 </layers>

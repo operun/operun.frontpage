@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-10-18 13:48+0000\n"
+"POT-Creation-Date: 2016-10-19 08:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Uncoverfade"
 msgstr ""
 
-#. Default: "Upload an image to accompany your article."
+#. Default: "Upload an image for the article."
 #: operun/frontpage/content/article.py:20
 msgid "article_image_description"
 msgstr ""
@@ -102,48 +102,48 @@ msgstr ""
 msgid "frontpage_carousel_animation_description"
 msgstr ""
 
-#. Default: "Animation"
+#. Default: "Carousel animation"
 #: operun/frontpage/content/frontpage.py:71
 msgid "frontpage_carousel_animation_title"
 msgstr ""
 
-#. Default: "Select transition delay for the carousel."
+#. Default: "Select a transition delay for the carousel."
 #: operun/frontpage/content/frontpage.py:79
 msgid "frontpage_carousel_autoscroll_description"
 msgstr ""
 
-#. Default: "Autoscroll"
+#. Default: "Carousel autoscroll"
 #: operun/frontpage/content/frontpage.py:78
 msgid "frontpage_carousel_autoscroll_title"
 msgstr ""
 
 #. Default: "Upload a default article item image."
-#: operun/frontpage/content/frontpage.py:147
+#: operun/frontpage/content/frontpage.py:154
 msgid "frontpage_default_article_image_description"
 msgstr ""
 
-#. Default: "Default article item image"
-#: operun/frontpage/content/frontpage.py:146
+#. Default: "Default image"
+#: operun/frontpage/content/frontpage.py:153
 msgid "frontpage_default_article_image_title"
 msgstr ""
 
-#. Default: "Upload a default news item image. Recommended."
-#: operun/frontpage/content/frontpage.py:110
+#. Default: "Upload a default news item image."
+#: operun/frontpage/content/frontpage.py:117
 msgid "frontpage_default_image_description"
 msgstr ""
 
-#. Default: "Default news item image"
-#: operun/frontpage/content/frontpage.py:109
+#. Default: "Default image"
+#: operun/frontpage/content/frontpage.py:116
 msgid "frontpage_default_image_title"
 msgstr ""
 
 #. Default: "Upload a default tile item image."
-#: operun/frontpage/content/frontpage.py:184
+#: operun/frontpage/content/frontpage.py:191
 msgid "frontpage_default_tile_image_description"
 msgstr ""
 
-#. Default: "Default tile item image"
-#: operun/frontpage/content/frontpage.py:183
+#. Default: "Default image"
+#: operun/frontpage/content/frontpage.py:190
 msgid "frontpage_default_tile_image_title"
 msgstr ""
 
@@ -167,33 +167,33 @@ msgstr ""
 msgid "frontpage_fieldset_tile_label"
 msgstr ""
 
-#. Default: "Limit the number of displayed items."
-#: operun/frontpage/content/frontpage.py:153
+#. Default: "Limit the number of displayed article items."
+#: operun/frontpage/content/frontpage.py:147
 msgid "frontpage_limit_article_description"
 msgstr ""
 
-#. Default: "Number of news items"
-#: operun/frontpage/content/frontpage.py:152
+#. Default: "Limit articles"
+#: operun/frontpage/content/frontpage.py:146
 msgid "frontpage_limit_article_title"
 msgstr ""
 
-#. Default: "Limit the number of displayed items."
-#: operun/frontpage/content/frontpage.py:116
+#. Default: "Limit the number of displayed news items."
+#: operun/frontpage/content/frontpage.py:110
 msgid "frontpage_limit_news_description"
 msgstr ""
 
-#. Default: "Number of news items"
-#: operun/frontpage/content/frontpage.py:115
+#. Default: "Limit news"
+#: operun/frontpage/content/frontpage.py:109
 msgid "frontpage_limit_news_title"
 msgstr ""
 
-#. Default: "Limit the number of displayed items."
-#: operun/frontpage/content/frontpage.py:190
+#. Default: "Limit the number of displayed tile items."
+#: operun/frontpage/content/frontpage.py:184
 msgid "frontpage_limit_tile_description"
 msgstr ""
 
-#. Default: "Number of news items"
-#: operun/frontpage/content/frontpage.py:189
+#. Default: "Limit tiles"
+#: operun/frontpage/content/frontpage.py:183
 msgid "frontpage_limit_tile_title"
 msgstr ""
 
@@ -202,7 +202,7 @@ msgstr ""
 msgid "frontpage_section_article_heading_description"
 msgstr ""
 
-#. Default: "Section article heading"
+#. Default: "Article heading"
 #: operun/frontpage/content/frontpage.py:140
 msgid "frontpage_section_article_heading_title"
 msgstr ""
@@ -212,7 +212,7 @@ msgstr ""
 msgid "frontpage_section_news_heading_description"
 msgstr ""
 
-#. Default: "Section news heading"
+#. Default: "News heading"
 #: operun/frontpage/content/frontpage.py:103
 msgid "frontpage_section_news_heading_title"
 msgstr ""
@@ -222,12 +222,12 @@ msgstr ""
 msgid "frontpage_section_tile_heading_description"
 msgstr ""
 
-#. Default: "Section tile heading"
+#. Default: "Tile heading"
 #: operun/frontpage/content/frontpage.py:177
 msgid "frontpage_section_tile_heading_title"
 msgstr ""
 
-#. Default: "Enable the displaying of articles below news."
+#. Default: "Display articles below news."
 #: operun/frontpage/content/frontpage.py:134
 msgid "frontpage_show_article_description"
 msgstr ""
@@ -247,7 +247,7 @@ msgstr ""
 msgid "frontpage_show_carousel_title"
 msgstr ""
 
-#. Default: "Enable or disable frontpage description."
+#. Default: "Enable or disable the frontpage description."
 #: operun/frontpage/content/frontpage.py:41
 msgid "frontpage_show_description_description"
 msgstr ""
@@ -257,7 +257,7 @@ msgstr ""
 msgid "frontpage_show_description_title"
 msgstr ""
 
-#. Default: "Enable the displaying of news below carousel."
+#. Default: "Display news below carousel."
 #: operun/frontpage/content/frontpage.py:97
 msgid "frontpage_show_news_description"
 msgstr ""
@@ -267,7 +267,7 @@ msgstr ""
 msgid "frontpage_show_news_title"
 msgstr ""
 
-#. Default: "Enable or disable text below carousel."
+#. Default: "Enable or disable description below the carousel."
 #: operun/frontpage/content/frontpage.py:48
 msgid "frontpage_show_text_description"
 msgstr ""
@@ -277,7 +277,7 @@ msgstr ""
 msgid "frontpage_show_text_title"
 msgstr ""
 
-#. Default: "Enable the displaying of tiles below news."
+#. Default: "Display tiles below news."
 #: operun/frontpage/content/frontpage.py:171
 msgid "frontpage_show_tile_description"
 msgstr ""
@@ -287,7 +287,7 @@ msgstr ""
 msgid "frontpage_show_tile_title"
 msgstr ""
 
-#. Default: "Enable or disable frontpage title."
+#. Default: "Enable or disable the frontpage title."
 #: operun/frontpage/content/frontpage.py:34
 msgid "frontpage_show_title_description"
 msgstr ""
@@ -307,7 +307,7 @@ msgstr ""
 msgid "frontpage_text_title"
 msgstr ""
 
-#. Default: "Upload an image to accompany your teaser."
+#. Default: "Upload an image for the teaser."
 #: operun/frontpage/content/teaser.py:20
 msgid "teaser_image_description"
 msgstr ""
@@ -327,7 +327,7 @@ msgstr ""
 msgid "teaser_url_title"
 msgstr ""
 
-#. Default: "Select a background colour for the tile."
+#. Default: "Select a background color for the tile."
 #: operun/frontpage/content/tile.py:33
 msgid "tile_color_description"
 msgstr ""
@@ -337,7 +337,7 @@ msgstr ""
 msgid "tile_color_title"
 msgstr ""
 
-#. Default: "Enter an icon from the available icons"
+#. Default: "Select an available icon."
 #: operun/frontpage/content/tile.py:27
 msgid "tile_icon_description"
 msgstr ""
@@ -347,7 +347,7 @@ msgstr ""
 msgid "tile_icon_title"
 msgstr ""
 
-#. Default: "Upload an image to accompany your tile."
+#. Default: "Upload an image for the tile."
 #: operun/frontpage/content/tile.py:40
 msgid "tile_image_description"
 msgstr ""

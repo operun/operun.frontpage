@@ -24,20 +24,20 @@ class ITile(Interface):
 
     icon = schema.TextLine(
         title=_(u'tile_icon_title', default='Icon'),
-        description=_(u'tile_icon_description', default=u'Enter an icon from the available icons'),  # noqa
+        description=_(u'tile_icon_description', default=u'Select an available icon.'),  # noqa
         required=False,
     )
 
     color = schema.Choice(
         title=_(u'tile_color_title', default=u'Tile color'),
-        description=_(u'tile_color_description', default=u'Select a background colour for the tile.'),  # noqa
+        description=_(u'tile_color_description', default=u'Select a background color for the tile.'),  # noqa
         vocabulary=ColorVocabulary,
         required=False,
         )
 
     image = NamedBlobImage(
         title=_(u'tile_image_title', default='Image'),
-        description=_(u'tile_image_description', default=u'Upload an image to accompany your tile.'),  # noqa
+        description=_(u'tile_image_description', default=u'Upload an image for the tile.'),  # noqa
         required=False,
     )
 
