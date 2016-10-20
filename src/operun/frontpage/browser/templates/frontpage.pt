@@ -126,7 +126,7 @@
 
         <section id="section-news" class="row no-padding" tal:define="items view/news" tal:condition="items">
 
-          <div class="col-lg-12">
+          <div class="section-heading col-lg-12">
             <h2 tal:condition="context/section_news_heading" tal:content="context/section_news_heading">News</h2>
           </div>
 
@@ -153,7 +153,7 @@
 
         <section id="section-articles" class="row no-padding" tal:define="items view/articles" tal:condition="items">
 
-          <div class="col-lg-12">
+          <div class="section-heading col-lg-12">
             <h2 tal:condition="context/section_article_heading" tal:content="context/section_article_heading">Articles</h2>
           </div>
 
@@ -180,7 +180,7 @@
 
         <section id="section-tiles" class="row no-padding" tal:define="items view/tiles" tal:condition="items">
 
-          <div class="col-lg-12">
+          <div class="section-heading col-lg-12">
             <h2 tal:condition="context/section_tile_heading" tal:content="context/section_tile_heading">Topics</h2>
           </div>
 
