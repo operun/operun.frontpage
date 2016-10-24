@@ -138,10 +138,10 @@ class FrontpageView(BrowserView):
                 tag = None
 
                 if item.image:
-                    tag = self.get_image(tag=True, context=item, item='image', width=555)  # noqa
+                    tag = self.get_image(tag=True, context=item, item='image', width=550, height=236)  # noqa
                 else:
                     if self.context.default_image:
-                        tag = self.get_image(tag=True, context=self.context, item='default_image', width=555)  # noqa
+                        tag = self.get_image(tag=True, context=self.context, item='default_image', width=550, height=236)  # noqa
                     else:
                         tag = None
 
