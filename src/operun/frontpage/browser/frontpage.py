@@ -54,7 +54,7 @@ class FrontpageView(BrowserView):
 
         return autoscroll + animation
 
-    def get_image(self, tag, context, item, width, height):
+    def get_image(self, tag, context, item, width=None, height=None):
         """
         Return image tag.
         """
@@ -138,10 +138,10 @@ class FrontpageView(BrowserView):
                 tag = None
 
                 if item.image:
-                    tag = self.get_image(tag=True, context=item, item='image', width=380, height=165)  # noqa
+                    tag = self.get_image(tag=True, context=item, item='image', width=555)  # noqa
                 else:
                     if self.context.default_image:
-                        tag = self.get_image(tag=True, context=self.context, item='default_image', width=380, height=165)  # noqa
+                        tag = self.get_image(tag=True, context=self.context, item='default_image', width=555)  # noqa
                     else:
                         tag = None
 
