@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.min.css">
+
+<div id="cp2" class="input-group colorpicker-component">
+  <input type="text"
+         value="#3F51B5"
+         class="form-control"
+         tal:attributes="id string:${view/id};
+                         name view/name;
+                         class string:${view/klass} place;
+                         style view/style;
+                         title view/title;
+                         lang view/lang;
+                         onclick view/onclick;
+                         ondblclick view/ondblclick;
+                         onmousedown view/onmousedown;
+                         onmouseup view/onmouseup;
+                         onmouseover view/onmouseover;
+                         onmousemove view/onmousemove;
+                         onmouseout view/onmouseout;
+                         onkeypress view/onkeypress;
+                         onkeydown view/onkeydown;
+                         onkeyup view/onkeyup;
+                         value view/value;
+                         disabled view/disabled;
+                         tabindex view/tabindex;
+                         onfocus view/onfocus;
+                         onblur view/onblur;
+                         onchange view/onchange;
+                         readonly view/readonly;
+                         alt view/alt;
+                         accesskey view/accesskey;
+                         onselect view/onselect;
+                         size view/size;
+                         maxlength view/maxlength" />
+
+  <span class="input-group-addon"><i></i></span>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/js/bootstrap-colorpicker.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    $('#cp2').colorpicker();
+
+  });
+</script>

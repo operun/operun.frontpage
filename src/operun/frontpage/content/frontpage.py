@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from operun.frontpage import _
+from operun.frontpage.widgets.widget import ColorPickerWidget
 from plone.app.textfield import RichText
 from plone.dexterity.content import Container
+from plone.directives import form
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel.directives import fieldset
 from zope import schema
@@ -23,11 +25,21 @@ EffectVocabulary = SimpleVocabulary(
 
 class IFrontpage(Interface):
 
+    color = schema.TextLine(
+        title=_("behavior_color_title", default=u"Color"),
+        description=_("behavior_color_description", default=u"Choose a color value."),  # noqa
+        required=False,
+    )
+
+    form.widget(
+        color=ColorPickerWidget
+    )
+
     text = RichText(
         title=_(u'frontpage_text_title', default=u'Text'),
         description=_(u'frontpage_text_description', default=u'Add a description below the carousel.'),  # noqa
         required=False,
-        )
+    )
 
     show_title = schema.Bool(
         title=_(u"frontpage_show_title_title", default="Show title"),
@@ -72,14 +84,14 @@ class IFrontpage(Interface):
         description=_(u'frontpage_carousel_animation_description', default=u'Select a transition effect for the carousel.'),  # noqa
         vocabulary=EffectVocabulary,
         required=False,
-        )
+    )
 
     carousel_autoscroll = schema.Int(
         title=_(u'frontpage_carousel_autoscroll_title', default=u'Carousel autoscroll'),  # noqa
         description=_(u'frontpage_carousel_autoscroll_description', default=u'Select a transition delay for the carousel.'),  # noqa
         default=5000,
         required=False,
-        )
+    )
 
     fieldset(
         'news',

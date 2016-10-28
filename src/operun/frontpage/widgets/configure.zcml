@@ -1,0 +1,16 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:z3c="http://namespaces.zope.org/z3c"
+           i18n_domain="operun.frontpage">
+
+  <class class=".widget.ColorPickerWidget">
+    <require permission="zope.Public"
+             interface="operun.frontpage.widgets.widget.IColorPickerWidget" />
+  </class>
+
+  <!-- Widget Defaults Not Configured -->
+  <z3c:widgetTemplate mode="input"
+                      widget="operun.frontpage.widgets.widget.IColorPickerWidget"
+                      layer="z3c.form.interfaces.IFormLayer"
+                      template="color_picker.pt" />
+
+</configure>
