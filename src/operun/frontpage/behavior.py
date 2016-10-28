@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from medialog.hyperlapse.widgets.widget import ColorPickerWidget
 from operun.frontpage import _
+from operun.frontpage.widgets.widget import ColorPickerWidget
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.directives import form
 from zope import schema

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from medialog.iconpicker.widgets.widget import IconPickerFieldWidget
 from operun.frontpage import _
-from operun.frontpage.widgets.widget import ColorPickerWidget
 from plone.app.textfield import RichText
 from plone.dexterity.content import Container
 from plone.directives import form
@@ -25,14 +25,14 @@ EffectVocabulary = SimpleVocabulary(
 
 class IFrontpage(Interface):
 
-    color = schema.TextLine(
-        title=_("behavior_color_title", default=u"Color"),
-        description=_("behavior_color_description", default=u"Choose a color value."),  # noqa
+    icon = schema.TextLine(
+        title=_("widget_icon_title", default=u"Icon"),
+        description=_("widget_icon_description", default=u"Choose an icon."),  # noqa
         required=False,
     )
 
     form.widget(
-        color=ColorPickerWidget
+        icon=IconPickerFieldWidget
     )
 
     text = RichText(
