@@ -25,16 +25,6 @@ EffectVocabulary = SimpleVocabulary(
 
 class IFrontpage(Interface):
 
-    icon = schema.TextLine(
-        title=_("widget_icon_title", default=u"Icon"),
-        description=_("widget_icon_description", default=u"Choose an icon."),  # noqa
-        required=False,
-    )
-
-    form.widget(
-        icon=IconPickerFieldWidget
-    )
-
     text = RichText(
         title=_(u'frontpage_text_title', default=u'Text'),
         description=_(u'frontpage_text_description', default=u'Add a description below the carousel.'),  # noqa
@@ -174,6 +164,7 @@ class IFrontpage(Interface):
             'show_tile',
             'section_tile_heading',
             'limit_tile',
+            'tile_icon',
             'default_tile_image'
         ),
     )
@@ -196,6 +187,16 @@ class IFrontpage(Interface):
         description=_(u'frontpage_limit_tile_description', default=u'Limit the number of displayed tile items.'),  # noqa
         default=2,
         required=False,
+    )
+
+    tile_icon = schema.TextLine(
+        title=_("widget_icon_title", default=u"Icon"),
+        description=_("widget_icon_description", default=u"Choose an icon."),  # noqa
+        required=False,
+    )
+
+    form.widget(
+        tile_icon=IconPickerFieldWidget
     )
 
     default_tile_image = NamedBlobImage(
